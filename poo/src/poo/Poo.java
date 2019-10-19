@@ -13,9 +13,15 @@ public class Poo {
         System.out.println(ford.peso());
         System.out.println("Su coche Ford tiene "+ford.ancho()+" metros de ancho.");
         
-        ford.color(); // El del void
+        System.out.println(ford.datosGenerales());
+        
+        ford.voidcolor("verde"); // El del void
         
         System.out.println(ford.dimeColor());
+        
+        ford.colorDelosAsientos("si"); // <-- Siempre llamar al setter
+        
+        System.out.println(ford.dimeAsientos());
     }
     
 }
