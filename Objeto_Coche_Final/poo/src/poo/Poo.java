@@ -22,6 +22,10 @@ public class Poo {
         ford.colorDelosAsientos("si"); // <-- Siempre llamar al setter
         
         System.out.println(ford.dimeAsientos());
+        
+        ford.setClimatizador("no");
+        
+        System.out.println(ford.dimeClimatizador());
     }
     
 }

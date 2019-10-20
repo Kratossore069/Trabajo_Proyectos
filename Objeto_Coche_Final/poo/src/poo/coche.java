@@ -12,7 +12,8 @@ public class coche {
     private int motor;
     private int peso;
     private String color;
-    private boolean asientos;
+    private boolean asientos, climatizador;
+    
     
     public coche(){
         
@@ -69,6 +70,22 @@ public class coche {
             return "El coche tiene asientos de cuero.";
         }else{
             return "El coche tiene asientos de serie.";
+        }
+    }
+    
+    public void setClimatizador(String cli){
+        if(cli.equals("si")){
+            climatizador = true;
+        }else{
+            climatizador = false;
+        }
+    }
+    
+    public String dimeClimatizador(){
+        if(climatizador==true){
+            return "Su coche tiene climatizador.";
+        }else{
+            return "Su coche tiene aire acondicionado.";
         }
     }
 }
