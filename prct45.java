@@ -17,18 +17,16 @@ public class prct45 {
         descomposición en números primos:
         300 = 2*2*3*5*5*/
        
-        System.out.println("Número a insertar.");
+        System.out.println("Número a insertar -> ");
         Scanner sc = new Scanner (System.in);
-        int num = sc.nextInt();
+        int num = sc.nextInt(), divisor=1;
         
-        if(num>0){
-            for(int i = 1; i<=num; i++){
-                if(num % i == 0){
-                    System.out.println(num+" -> "+i);
-                }
+        while(num>=divisor){
+            divisor++;
+            while(num % divisor == 0){
+                System.out.println(divisor);
+                num /= divisor;
             }
-        }else{
-            System.out.println(num+" : no válido");
         }
     }
 }

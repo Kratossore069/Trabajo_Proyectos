@@ -46,6 +46,12 @@ public class prct46 {
 
         }
 
-        System.out.println("El número"+numero+" convertido a binario es: " + binario);
+        System.out.println("El número convertido a binario es: " + binario);
+        
+        System.out.println("Introduzca el número en binario ->");
+        String par = sc.next(); // Funciona así pero no con nextLine
+        String numeroBinario = par;
+        int num=Integer.parseInt(numeroBinario,2);
+        System.out.println(numeroBinario+" es "+num);
     }
 }
