@@ -16,8 +16,8 @@ public class Prct06 {
     obtenga   la   combinación   de   esos   dos   números.   Este   método   debe   hacer   uso   del   método
     factorial creado en la práctica anterior. La fórmula de la combinación es:*/
     
-    static int factorial(int a){
-        int factor = 1;
+    public static long factorial(int a){
+        long factor = 1;
         do{
             factor *= a;
             a--;
@@ -25,20 +25,28 @@ public class Prct06 {
         return factor;
     }
     
-    static int combinacion(int n, int r){
+    public static long combinacion(int n, int r){
         //combinacion(n,r) = factorial(n) / ( factorial(n-r) * factorial(r))
-        int resultado = factorial(n) / ( factorial(n-r) * factorial(r));
+        long resultado = factorial(n) / ( factorial(n-r) * factorial(r));
         return resultado;
     }
     
     public static void main(String[] args){
-        Scanner sc = new Scanner (System.in);
+        Scanner sc = new Scanner(System.in);
         System.out.println("Primer número");
         int n = sc.nextInt();
         System.out.println("Segundo número");
         int r = sc.nextInt();
         
-        int resultado = combinacion(n,r);
+        while(r>n){
+            System.out.println("Introduzca primero un número mayor y luego, otro menor.");
+            System.out.println("Primer número");
+            n = sc.nextInt();
+            System.out.println("Segundo número");
+            r = sc.nextInt();
+        }
+        
+        long resultado = combinacion(n,r);
         System.out.println("Resultado -> "+resultado);
     }
         
