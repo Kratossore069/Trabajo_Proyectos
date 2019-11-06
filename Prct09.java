@@ -3,14 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tema3;
+package javaapplication13;
 
 /**
  *
  * @author Víctor
  */
 import java.util.Random;
+
 public class Prct09 {
+
     /*Práctica 9
     :  Crear un programa que guarde en un array 10 números aleatorios entre 1 y 99
     que sean pares. Luego mostrar en pantalla los 10 números, así como el máximo y el mínimo
@@ -29,7 +31,7 @@ public class Prct09 {
     }
     
     public static int minimo(int vec[]){
-        int menor=0;
+        int menor=10;
         for(int i =0; i<vec.length; i++){
             if(menor<vec[i]){
                 menor = menor;
@@ -43,17 +45,13 @@ public class Prct09 {
     public static void main(String[] args) {
         Random rc = new Random();
         int array[] = new int[10];
-        for (int i = 0; i < array.length; i++) {
-            array[i]=-1;
-            
-        }
 
         for (int i = 0; i < array.length; i++) {
-            int aleatorio = rc.nextInt(99) + 1;
-            if ((aleatorio % 2 == 0) && (aleatorio < 200)) { 
+            int aleatorio = rc.nextInt(99-1) + 1;
+            if ((aleatorio % 2 == 0) && (aleatorio > 0)){
                 array[i] = aleatorio;
             }else{
-                i--; //Para evitar que haya 0
+                i--;
             }
         }
 
