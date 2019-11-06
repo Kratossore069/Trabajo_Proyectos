@@ -31,9 +31,9 @@ public class Prct09 {
     }
     
     public static int minimo(int vec[]){
-        int menor=10;
+        int menor=999;
         for(int i =0; i<vec.length; i++){
-            if(menor<vec[i]){
+            if(menor<=vec[i]){
                 menor = menor;
             }else{
                 menor = vec[i];
