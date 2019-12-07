@@ -42,13 +42,13 @@ public class MiMain {
         perro.mostrar();
         perro.cumpleanios();
         
-        Persona p = new Persona();
+        //Persona p = new Persona();
         //Persona a = new Persona();
         
-        p.apellido = "Martín";
+       /* p.apellido = "Martín";
         p.nombre = "Juan";
         p.edad = 21;
         
-        System.out.println(p.apellido+" "+p.nombre+" "+p.edad);
+        System.out.println(p.apellido+" "+p.nombre+" "+p.edad);*/
     }
 }
