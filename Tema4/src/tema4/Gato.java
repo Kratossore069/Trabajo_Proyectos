@@ -10,6 +10,8 @@ package tema4;
  * @author Víctor_Gabriel_Carvajal_Aróstegui
  */
 public class Gato {
+    
+    
 
     public int getPatas() {
         return patas;
@@ -38,60 +40,63 @@ public class Gato {
     public double getGarras() {
         return garras;
     }
-
-    public String getBufar() { //GETTER
+    
+    public String getBufar(){ //GETTER
         return bufar;
     }
-
-    public void ronronear() { //SETTER
+    
+    public void ronronear(){ //SETTER
         System.out.println("Ronroneo");
     }
-
-    public void maullar() { //SETTER
+    
+    public void maullar(){ //SETTER
         System.out.println("Miau");
     }
-
-    public void setAnios() {
+    
+    public void setAnios(){
         edad++;
         garras += 2;
     }
-
-    public void comer(int gramos) {
+    
+    public void comer(int gramos){
         peso += gramos;
     }
-
-    /*void setPeso(double p){
+    
+    void setPeso(int p){
         peso = p;
-    }*/
-    public Gato(String n, String r, int p) { //Constructores no devuelven nada
+    }
+    
+    
+    
+    public Gato(String n, String r, int p){ //Constructores no devuelven nada
         RAZA = r;
         nombre = n;
         patas = 4;
         garras = 0;
         peso = p;
-
+        
+        
     }
-
-    public void mostrar() {
-        System.out.println("Nombre: " + nombre + " Edad: " + edad + " Raza: " + RAZA
-                + " Peso: " + peso + " Garras: " + garras);
+    
+    public void mostrar(){
+        System.out.println("Nombre: "+nombre+" Edad: "+edad+" Raza: "+RAZA
+        +" Peso: "+peso+" Garras: "+garras);
     }
-
-    public String setNombre(String n) {
+    
+    public void setNombre(String n) {
         String array[] = {"Isidoro", "Félix", "Garfield", "Antonio", "Paca", "Pelusa", "Doraemon"};
         String resultado = "";
-
-        for (int i = 0; i < array.length; i++) {
-            if (n.equals(array[i]) == true) {
-                resultado = "Ese nombre ya está cogido";
-                break;
+        boolean bandera = false;
+        for (int i = 0; i < array.length &&!bandera; i++) {
+            if (n.equals(array[i])) {
+                nombre = n;
+                bandera = true;
             } else {
-                resultado = "Nombre libre";
+                resultado = "Nombre no admitido";
             }
         }
-        return resultado;
     }
-
+    
     private int edad;
     private String sonido;
     private String ronronear;
@@ -102,5 +107,6 @@ public class Gato {
     private int peso;
     private int patas = 4;
     private String nombre;
-
+    
+    
 }

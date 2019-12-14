@@ -10,7 +10,7 @@ package tema4;
  * @author Víctor_Gabriel_Carvajal_Aróstegui
  */
 
-class Perro{
+class Prct05{
     double peso;
     String nombre, raza;
     private String pulmones;
@@ -32,7 +32,10 @@ class Perro{
 public class MiMain {
     public static void main(String[] args) {
         
-        Perro perro = new Perro();
+        
+        Coche coche =  new Coche("Victor");
+        
+        Prct05 perro = new Prct05();
         
         perro.nombre = "Fufi";
         perro.peso = 30;
@@ -42,13 +45,13 @@ public class MiMain {
         perro.mostrar();
         perro.cumpleanios();
         
-        //Persona p = new Persona();
+        Persona p = new Persona();
         //Persona a = new Persona();
         
-       /* p.apellido = "Martín";
+        p.apellido = "Martín";
         p.nombre = "Juan";
         p.edad = 21;
         
-        System.out.println(p.apellido+" "+p.nombre+" "+p.edad);*/
+        System.out.println(p.apellido+" "+p.nombre+" "+p.edad);
     }
 }

@@ -13,10 +13,11 @@ public class Coche {
 
  
 
-    private String nombre;
-    private boolean encendido;
-    private boolean frenoDeManoPuesto;
-    private int posicion=0;
+    protected String nombre;
+    boolean encendido;
+    public boolean frenoDeManoPuesto;
+    private int posicion;
+    private Maletero miMaletero;
 
     //----------------------------------------------------Métodos
     public String subirFrenoDeMano() {
@@ -28,17 +29,6 @@ public class Coche {
             respuesta = "Ya estaba puesto";
         }
         return respuesta;
-    }
-    
-    public String apagarMotor(){
-        String res = "";
-        if(encendido){
-            encendido = false;
-            res = "Coche apagado";
-        }else{
-            res = "El coche ya se encuentra apagado";
-        }
-        return res;
     }
     
     public String bajarFrenoDeMano() {
@@ -81,43 +71,34 @@ public class Coche {
     
     public String moverCocheIzquierda(int cantidad){
         String res="";
-        int left = posicion -= cantidad;
-        if(left <= 0){ //ERROR
-            posicion = posicion;
-            res = "El coche se cae por el barranco, no puedes moverlo "+cantidad+" a la izquierda.";
-        }else{
-            posicion -= cantidad;
-            res = "El coche se mueve "+cantidad+" hacia la izquierda";
-        }
+        int espacio;
+        //espacio = moverCoche(-1*cantidad);
         return res;
     }
     
-    public String moverCocheDerecha(int cantidad){
-        String res="";
-        int rigth = posicion +=cantidad;
-        if(rigth > 9){ //ERROR
-            posicion = posicion;
-            res = "El coche se cae por el barranco, no puedes moverlo "+cantidad+" más a la derecha";
-        }else{
-            posicion += cantidad;
-            res = "El coche se mueve "+cantidad+" hacia la derecha";
-        }
-        return res;
-    }
+    /*public String moverCocheDerecha(int cantidad){
+        moverCoche(-1*cantidad);
+    }*/
     
     public String estado(){
         return nombre+" \nencendido: "+encendido+" \nposicion: "+posicion+" \nfreno de mano: "+frenoDeManoPuesto;
     }
+    
 
     //------------------------------------------------------Constructores
     public Coche(String n) {
+        this(n,0);
         nombre = n;
+        miMaletero = new Maletero();
     }
 
     public Coche(String n, int p) {
-        n = nombre;
-        p = posicion;
+        //maletero = new String[SIZE];
+        n = this.nombre;
+        p = this.posicion;
     }
+    
+    public Coche(){}
 
     // -----------------------------------------------------Setters y Getters
     public String getNombre() {

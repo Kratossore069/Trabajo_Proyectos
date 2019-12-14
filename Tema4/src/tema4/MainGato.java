@@ -14,7 +14,17 @@ public class MainGato {
         Gato gato = new Gato("Félix", "Egipcio", 2300);
         
         gato.mostrar();
-        String verificoNombre = gato.setNombre("Paca");
-        System.out.println(verificoNombre);
+        gato.setNombre("Antonio");
+        
+        System.out.println(resta(10,4));
+        System.out.println(restaDos("hola mundo","a mundo"));
+    }
+    
+    public static int resta(int num1, int num2){
+        return num1-num2;
+    }
+    
+    public static String restaDos(String str1, String str2){
+        return str1.substring(0, str1.length()-str2.length());
     }
 }

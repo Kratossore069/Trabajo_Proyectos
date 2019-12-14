@@ -7,11 +7,12 @@ package tema4;
 
 /**
  *
- * @author Víctor_Gabriel_Carvajal_Aróstegui
+ * @author Víctor Gabriel Carvajal Aróstegui
  */
-public class Persona {
-    
-    String nombre, apellido;
-    int edad;
-    
+public class Perro {
+    public static void main(String[] args) {
+        
+    }
 }
+
+
