@@ -18,24 +18,29 @@ class DNI {
     //CONSTRUCTORES
     public DNI(int numero) {
         this.dniNum = numero;
-        letra = calcularLetra(dniNum);
+        this.letra = calcularLetra(dniNum);
     }
 
     public DNI() {
         letra = calcularLetra(dniNum);
+    }
+    
+    public DNI(String strDNI){
+        if(validarDNI(strDNI)){
+            this.dniNum = Integer.parseInt(strDNI.substring(0,8));
+            this.letra = strDNI.toUpperCase().charAt(strDNI.length()-1);
+        }
     }
 
     //MÉTODOS
     /*public String validarDNI(String dni){
         
     }*/
-    public char calcularLetra(int num) {
-        int numeroSumado = sumarCifrasNumero(dniNum);
-        int resto = numeroSumado % 23;
-        return LETRAPOSIBLE.charAt(resto);
+    public static char calcularLetra(int num) {
+        return LETRAPOSIBLE.charAt(num%23);
     }
 
-    private int sumarCifrasNumero(int a) {
+    /*private int sumarCifrasNumero(int a) {
         int res = 0;
         while (a > 0) { //Método para sumar dígito por dígito
 
@@ -43,6 +48,25 @@ class DNI {
 
             a = a / 10;
         }
+        return res;
+    }*/
+    
+    public boolean validarDNI(String strDNI){
+        boolean res = true;
+        int numDNI;
+        try{
+            numDNI = Integer.parseInt(strDNI.substring(0,8));
+            char letra = calcularLetra(numDNI);
+            char letraStrDNI = strDNI.toUpperCase().charAt(strDNI.length()-1);
+            if(letra == letraStrDNI){
+                res = true;
+            }else{
+                res = false;
+            }
+        }catch(Exception ex){
+            res = false;
+        }
+        
         return res;
     }
 
