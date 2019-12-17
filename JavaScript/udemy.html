@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+  <title>Masterclass</title>
+</head>
+<body>
+
+<p id="tip"></p>
+<p id="top"></p>
+<p id="a"></p>
+<p id="b"></p>
+<p id="c"></p>
+<p id="d"></p>
+<p id="e"></p>
+
+<script> <!-- Aquí empiezan los scripts -->
+
+var coche = {tipo:"Ford", color:"Azul", matricula:"123456Z"};
+var x = 10;
+var y = 1;
+var frutas = ["Pera", "Plátano", "Manzana", "Fresas"];
+var nota = 22;
+var multiplicar = 5;
+
+document.getElementById("tip").innerHTML="Es un "+coche.tipo+" de color "+coche.color+
+" y con matrícula "+coche.matricula;
+
+document.getElementById("top").innerHTML="Además, la palabra "+coche.color+
+" tiene "+coche.color.length+" letras."
+
+document.getElementById("a").innerHTML="Aquí sale un número aleatorio entre "+
+y+" y "+x+" y es: "+(Math.floor(Math.random()*10)+1);
+
+document.getElementById("b").innerHTML="Quiero un/una "+frutas[2];
+
+document.getElementById("c").innerHTML="La lista de frutas es "+frutas.toString();
+
+if(nota < 50){
+	document.getElementById("d").innerHTML="Has sacado una nota de "+nota+" y has suspendido.";
+}else{
+	document.getElementById("d").innerHTML="Tu nota es de "+nota+" y has aprobado.";
+}
+
+document.write("Tabla del "+multiplicar);
+document.write("<br />"); <!-- Salto de línea -->
+
+for(var count=1; count<=10; count++){
+	document.write(multiplicar+" x "+count+" = "+(multiplicar*count));
+	document.write("<br />");
+}
+</script> <!-- Aquí terminan -->
+
+
+</body>
+</html>
