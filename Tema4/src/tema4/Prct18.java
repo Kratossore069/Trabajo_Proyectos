@@ -24,11 +24,13 @@ class DNI {
     public DNI() {
         letra = calcularLetra(dniNum);
     }
-    
-    public DNI(String strDNI){
-        if(validarDNI(strDNI)){
-            this.dniNum = Integer.parseInt(strDNI.substring(0,8));
-            this.letra = strDNI.toUpperCase().charAt(strDNI.length()-1);
+
+    public DNI(String strDNI) throws Exception {
+        if (validarDNI(strDNI)) {
+            this.dniNum = Integer.parseInt(strDNI.substring(0, 8));
+            this.letra = strDNI.toUpperCase().charAt(strDNI.length() - 1);
+        } else {
+            throw new Exception("No es DNI válido.");
         }
     }
 
@@ -37,7 +39,7 @@ class DNI {
         
     }*/
     public static char calcularLetra(int num) {
-        return LETRAPOSIBLE.charAt(num%23);
+        return LETRAPOSIBLE.charAt(num % 23);
     }
 
     /*private int sumarCifrasNumero(int a) {
@@ -50,27 +52,25 @@ class DNI {
         }
         return res;
     }*/
-    
-    public boolean validarDNI(String strDNI){
+    public boolean validarDNI(String strDNI) {
         boolean res = true;
         int numDNI;
-        try{
-            numDNI = Integer.parseInt(strDNI.substring(0,8));
+        try {
+            numDNI = Integer.parseInt(strDNI.substring(0, 8));
             char letra = calcularLetra(numDNI);
-            char letraStrDNI = strDNI.toUpperCase().charAt(strDNI.length()-1);
-            if(letra == letraStrDNI){
+            char letraStrDNI = strDNI.toUpperCase().charAt(strDNI.length() - 1);
+            if (letra == letraStrDNI) {
                 res = true;
-            }else{
+            } else {
                 res = false;
             }
-        }catch(Exception ex){
+        } catch (Exception ex) {
             res = false;
         }
-        
+
         return res;
     }
 
-    
 }
 
 public class Prct18 {
@@ -95,13 +95,13 @@ public class Prct18 {
                                                       la letracalcularLetra() devuelve un char con la letra
                                                         correspondiente al número que se le pase.Crear
                                                           un constructor que reciba un entero que será el número del DNI, y un constructor decopia*/
-    
     public static void main(String[] args) {
         DNI miDni = new DNI();
-        
-        miDni.calcularLetra(12345678);
-    }
-    
+        try {
+            miDni.calcularLetra(12345678);
+        } catch (Exception ex) {
 
-    
+        }
+    }
+
 }
