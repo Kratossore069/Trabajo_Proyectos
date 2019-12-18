@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+<title>Verbos y sustantivos</title>
+<meta charset="utf-8"><meta>
+<link rel="icon" type="image/png" href="./icono.jpg" />
+
+
+</head>
+<body background="./fondo.jpg">
+<h2 align="center">El tema es: </h2>
+<h1 align="center" id="sustantivo"></h1>
+<h2 align="center">Y el verbo es: </h2>
+<h1 align="center" id="verbo"></h1>
+
+<script>
+var sustantivos = ["saltamontes", "fantasma", "oveja", "libro", "superhéroe", "ordenador", "muñeco", "velas", "campos", "abejas"];
+var verbos = ["huir", "comer", "dormir", "programar", "asesinar", "compensar", "organizar", "visualizar", "beber", "soñar"];
+var aleatorio = (Math.floor(Math.random()*(sustantivos.length))+0);
+document.getElementById("sustantivo").innerHTML=sustantivos[aleatorio];
+document.getElementById("verbo").innerHTML=verbos[aleatorio];
+</script>
+
+</body>
+</html>
