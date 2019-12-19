@@ -13,11 +13,15 @@
 <h1 align="center" id="verbo"></h1>
 
 <script>
-var sustantivos = ["saltamontes", "fantasma", "oveja", "libro", "superhéroe", "ordenador", "muñeco", "velas", "campos", "abejas"];
-var verbos = ["huir", "comer", "dormir", "programar", "asesinar", "compensar", "organizar", "visualizar", "beber", "soñar"];
-var aleatorio = (Math.floor(Math.random()*(sustantivos.length))+0);
-document.getElementById("sustantivo").innerHTML=sustantivos[aleatorio];
-document.getElementById("verbo").innerHTML=verbos[aleatorio];
+
+var sustantivos = ["saltamontes", "fantasma", "oveja", "libro", "superhéroe", "ordenador", "muñeco", "velas", "campos", "abejas", "cisnes", "novios"];
+var verbos = ["huir", "comer", "dormir", "programar", "asesinar", "compensar", "organizar", "visualizar", "beber", "soñar", "amedrentar", "casar"];
+var aleatorioSustantivos = (Math.floor(Math.random()*(sustantivos.length))+0);
+var aleatorioVerbos = (Math.floor(Math.random()*(verbos.length))+0);
+
+document.getElementById("sustantivo").innerHTML=sustantivos[aleatorioSustantivos];
+document.getElementById("verbo").innerHTML=verbos[aleatorioVerbos];
+
 </script>
 
 </body>
