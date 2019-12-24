@@ -20,6 +20,11 @@ public class Coche {
     private Maletero miMaletero;
 
     //----------------------------------------------------Métodos
+    
+    public String toString(String algo){
+        return algo.toString();
+    }
+    
     public String subirFrenoDeMano() {
         String respuesta = "";
         if (!frenoDeManoPuesto) {

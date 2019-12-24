@@ -22,4 +22,8 @@ public class Alumno {
     public static void aprobar(){
         System.out.println(1+(int)Math.random()*10);
     }
+    
+    public String toString(String algo){
+        return algo.toString();
+    }
 }

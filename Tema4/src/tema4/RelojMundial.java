@@ -90,19 +90,19 @@ class Clock {
         return res;
     }
     
-    @Override
+    /*@Override
     public String toString(){
-        return (horas>10)?""+this.horas:"0"+this.horas+
+        /*return (horas>10)?""+this.horas:"0"+this.horas+
                 (minutos>10)?""+this.minutos:"0"+this.minutos+
                 (segundos>10)?""+this.segundos:"0"+this.segundos;
-    }
+    }*/
 
-    public boolean establecerHora(int array[]) {
-        /* strHora.split(strHora);
+    /*public boolean establecerHora(int array[]) {
+        strHora.split(strHora);
         boolean res = false;
 
-        return res;*/
-    }
+        return res;
+    }*/
 
     public void formatoHora() {
 
@@ -161,8 +161,8 @@ public class RelojMundial {
         /*reloj.incrementarMinutos(59);
 
         reloj.mostrar();*/
-        reloj.establecerHora(new int[]{2, 3, 4});
-        reloj.establecerHora("2:11");
+       /* reloj.establecerHora(new int[]{2, 3, 4});
+        reloj.establecerHora("2:11");*/
         
         try{
             Clock t = new Clock("20:51:25");

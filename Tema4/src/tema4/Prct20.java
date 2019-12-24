@@ -51,6 +51,10 @@ class Reloj {
     public void agregarMinutos(double minutos) {
 
     }
+    
+    public String toString(String algo){
+        return algo.toString();
+    }
 }
 
 public class Prct20 {

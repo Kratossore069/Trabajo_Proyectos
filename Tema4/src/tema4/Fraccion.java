@@ -71,6 +71,10 @@ public class Fraccion {
         
     }
     
+    public String toString(String algo){
+        return algo.toString();
+    }
+    
     public static Fraccion sumar(Fraccion fr1, Fraccion fr2){
         int mcm = (fr1.denominador * fr2.denominador) / mcd(fr1.denominador,fr2.denominador);
         

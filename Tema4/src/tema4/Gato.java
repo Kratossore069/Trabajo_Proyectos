@@ -53,6 +53,10 @@ public class Gato {
         System.out.println("Miau");
     }
     
+    public String toString(String algo){
+        return algo.toString();
+    }
+    
     public void setAnios(){
         edad++;
         garras += 2;
