@@ -9,7 +9,133 @@ package tema4;
  *
  * @author Víctor Gabriel Carvajal Aróstegui
  */
+class CocheAlquiler {
+
+    //Atributos
+    private String matricula;
+    private String marca;
+    private String modelo;
+    private double precio;
+    private int numDias;
+    private boolean alquilado = false;
+    private int fechaAlquiler;
+    private final int DIASALQUILER = 2;
+
+    //Constructor
+    public CocheAlquiler(String matricula, String marca, String modelo, double precio) {
+        this.matricula = matricula;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.precio = precio;
+    }
+
+    //Métodos
+    
+    /**
+     * Muestra la información referida al coche alquilado
+     *
+     * @author: Víctor Gabriel
+     * @return matricula, marca, modelo y precio
+     */
+    @Override
+    public String toString() {
+        String res="Matrícula: " + this.matricula + "\nMarca: " + this.marca + "\nModelo: " + this.modelo + "\nPrecio: " + this.precio;
+        return res;
+    }
+    
+    /**
+     * Método pensado para alquilar el coche
+     * @param dias int
+     * @param dd int
+     * @param mm int
+     * @param aa int
+     * @return -1 si el coche está alquilado, -2 si los días de alquiler son muy pocos y, en su defecto, el precio de alquilar el coche.
+     */
+    public double alquilar(int dias, int dd, int mm, int aa) {
+        double res = 0;
+        if (this.alquilado) {
+            res = -1;
+        } else if (dd < DIASALQUILER) {
+            res = -2;
+        } else {
+            res = 10 * dd;
+        }
+        return res;
+    }
+    
+    /**
+     * Método a devolver
+     * @param dias int
+     * @return -1 si no está alquilado y los días que pide el coche superan a los mínimos. Si sale 0, puede alquilarlo.
+     */
+    public double devolver(int dias) {
+        double res = 0;
+        if (!this.alquilado && dias > this.DIASALQUILER) {
+            res = -1;
+        }
+        return res;
+    }
+
+    //Getter y Setter
+    public int getFechaAlquiler() {
+        return fechaAlquiler;
+    }
+
+    public void setFechaAlquiler(int fechaAlquiler) {
+        this.fechaAlquiler = fechaAlquiler;
+    }
+
+    public String getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
+    }
+
+    public String getMarca() {
+        return marca;
+    }
+
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
+
+    public String getModelo() {
+        return modelo;
+    }
+
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
+    public int getNumDias() {
+        return numDias;
+    }
+
+    public void setNumDias(int numDias) {
+        this.numDias = numDias;
+    }
+
+    public boolean isAlquilado() {
+        return alquilado;
+    }
+
+    public void setAlquilado(boolean alquilado) {
+        this.alquilado = alquilado;
+    }
+}
+
 public class Prct26 {
+
     /*Práctica 26: Crear la clase CocheAlquiler como mínimo con atributos: String matricula,
 marca, modelo; double precio; int numDias; boolean alquilado; y la fecha de alquiler
 reflejada en tres valores enteros: dd, mm, aa
@@ -24,8 +150,12 @@ una cantidad de días. Este método devuelve -1 si el coche no está alquilado y
 sobrecoste que pudiera haber incurrido si sobrepasa los días de alquiler inicialmente
 establecidos
 Sobreescribir el método toString() que muestre los datos relevantes del alquiler*/
-    
+
     public static void main(String[] args) {
+        
+        CocheAlquiler coche = new CocheAlquiler("123A", "Fiat", "Mondeo", 500);
+        
+        System.out.println(coche.toString());
         
     }
 }
