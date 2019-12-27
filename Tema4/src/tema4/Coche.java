@@ -20,6 +20,16 @@ public class Coche {
     private Maletero miMaletero;
 
     //----------------------------------------------------Métodos
+    public String apagar(){
+        String res="";
+        if(this.encendido){
+            res = "Apagando el coche.";
+        }else{
+            res = "El coche ya estaba apagado.";
+        }
+        return res;
+    }
+    
     
     public String toString(String algo){
         return algo.toString();

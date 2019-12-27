@@ -27,22 +27,7 @@ class VectorLibre {
     }
 
     //MÉTODOS
-    /* 
-VectorLibre multiplicar(double numero) → el producto por un número es multiplicar sus
-componentes: V(3,8) * 2 = V(3*2,8*2)
-VectorLibre division(double numero) → La división por un número es dividir sus
-componentes: V(4,8) / 2 = V(4/2,8/2)
-VectorLibre normalizacion() → Normalizar un vector es dividirlo por su módulo
-VectorLibre opuesto() → Obtener el opuesto de un vector es multiplicarlo por -1
-VectorLibre suma(VectorLibre vectorLibre) → la suma de vectores se hace sumando sus
-componentes: V(1,2) + V(3,4) = V(1+3,2+4)
-VectorLibre resta(VectorLibre vectorLibre) → la resta es igual que la suma pero restando en
-lugar de sumar. Si bien este método se realizará apoyándose en otros dos métodos anteriores
-ya que la resta se puede obtener como la suma del opuesto
-adicionalmente los métodos toString() y equals() Respecto a este último como el punto
-origen lo estamos estableciendo para todos en (0,0) lo único que hay que comprobar es que
-los puntos fin sean iguales ( para ello se usará el método equals() de la clase Punto que
-antes se habrá creado )*/
+    
     
     public double modulo(int x, int y){
         int dobleX=x*x;
@@ -52,6 +37,22 @@ antes se habrá creado )*/
     }
     
     public VectorLibre multiplicar(double numero){
+        
+    }
+    
+    public VectorLibre division(double numero){
+        
+    }
+    
+    public VectorLibre normalizacion(){
+        
+    }
+    
+    public VectorLibre opuesto(int num){
+        return null;
+    }
+    
+    public VectorLibre suma(VectorLibre vectorLibre){
         
     }
     
