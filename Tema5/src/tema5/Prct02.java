@@ -21,21 +21,36 @@ bucles for-each*/
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        int num = 0;
-        int doble[][] = new int[4][5];
+        int doble[][] = new int[5][4];
+        int mayor = 1, menor = 999;
 
         for (int i = 0; i < doble.length; i++) {
-            for (int j = 0; j < doble.length; j++) {
-                System.out.println("Número para "+i+j);
-                num = sc.nextInt();sc.nextLine();
-                num = doble[i][j];
+            for (int j = 0; j < doble[0].length; j++) { //Importante ese [0]
+
+                System.out.println("Posición [" + i + "," + j + "] ");
+                doble[i][j] = sc.nextInt(); //Insertamos números
+
+                if (mayor > doble[i][j]) {
+                    mayor = mayor;
+                } else {
+                    mayor = doble[i][j];
+                }
+
+                if (menor > doble[i][j]) {
+                    menor = doble[i][j];
+                }
             }
         }
 
-        for (int[] a : doble) {
-            for (int todo : a) {
-                System.out.println(todo);
+        System.out.println("Mayor es " + mayor);
+        System.out.println("Menor es " + menor);
+
+        for (int i = 0; i < doble.length; i++) {
+            for (int j = 0; j < doble[0].length; j++) {
+                System.out.print("Posición [" + i + "," + j + "] " + doble[i][j] + " ");
             }
+            System.out.println("");
         }
+
     }
 }
