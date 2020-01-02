@@ -6,9 +6,12 @@
 package repaso;
 
 import java.awt.Color;
+import java.awt.Font;
+import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.SwingConstants;
 
 /**
  *
@@ -20,7 +23,7 @@ public class Ventana extends JFrame {
     public Ventana() {
         setDefaultCloseOperation(EXIT_ON_CLOSE); //Se cierra la ventana y se cierra el programa
         setTitle("Ventana de Víctor"); //Título
-        setBounds(200, 200, 300, 300); //Dónde aparece y tamaño de la ventana
+        setBounds(200, 200, 380, 380); //Dónde aparece y tamaño de la ventana
         setLocationRelativeTo(null); //Centra la pantalla
         componentes();
     }
@@ -32,10 +35,17 @@ public class Ventana extends JFrame {
         panel.setBackground(Color.black); //Color
         panel.setLayout(null); //Permite poner los textos donde se quiera
         
-        JLabel etiqueta = new JLabel();
-        etiqueta.setText("Buenas noches");
-        etiqueta.setBounds(10,10,90,90);
+        JLabel etiqueta = new JLabel("Buenas tardes", SwingConstants.CENTER); //Manda un mensaje y centra el texto
+        etiqueta.setForeground(Color.yellow);
+        etiqueta.setBounds(5,5,150,50); //Dimensiones de la pantalla y las letras
+        etiqueta.setOpaque(true); //Desactivar el diseño por defecto de las etiquetas
+        etiqueta.setBackground(Color.red); //Color de fondo de la etiqueta
+        etiqueta.setFont(new Font("arial",Font.ITALIC,15)); //Establecemos la fuente de text
         panel.add(etiqueta); //Agregamos la etiqueta
+        
+        JLabel imagen = new JLabel(new ImageIcon("/home/victor/Escritorio/duck.jpg")); //Creamos un elemento con la imagen
+        imagen.setBounds(10, 80, 200, 200); //Redimensionamos la imagen
+        panel.add(imagen); //Insertamos la imagen
     }
 
     //Main
