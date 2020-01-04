@@ -1,0 +1,12 @@
+Determinar que tipo de datos es más apropiado en cada caso para guardar la
+siguiente información:
+
+
+1. Si un empleado está casado o no. -> boolean casado
+2. 999999. -> int num
+3. Día de la semana -> String diaDeLaSemana
+4. Día del año. -> byte diaDelAnio
+5. Sexo: con dos valores posibles 'V' o 'M' -> char sexo
+6. Milisegundos transcurridos desde el 01/01/1970 hasta nuestros días. -> long milisegundos
+7. Almacenar el total de una factura -> float totalFactura
+8. Población mundial del planeta tierra. -> long poblacionMundial

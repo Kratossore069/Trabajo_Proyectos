@@ -1,0 +1,15 @@
+Dados los siguientes identificadores, indicar si son válidos o no. Justificar las
+respuestas. Si algún caso son válidos pero no son recomendables por algún motivo
+detallarlo.
+
+
+ mi variable -> No se pueden poner espacios en una variable. No válido.
+ num_de_cte -> Válido pero no aconsejable por la barra.
+ ____programa -> Válido pero no aconsejable por la barra.
+ 3tema -> No válido porque no se puede poner un número delante de una variable.
+ cierto? -> No válido porque tiene un carácter no permitido.
+ númerodeCliente -> No válido porque tiene una tilde.
+ jose~ -> No válido por un carácter no permitido.
+ año -> Válido pero no aconsejable por la ñ.
+ PI -> Es permitido para una constante, no para una variable.
+ int -> No válido porque es una palabra reservada.
