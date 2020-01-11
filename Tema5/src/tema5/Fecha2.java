@@ -4,20 +4,23 @@
  * and open the template in the editor.
  */
 package repaso;
-
 import java.util.Date;
 
 /**
  *
  * @author Víctor Gabriel Carvajal Aróstegui
  */
-public class Fecha {
+public class Fecha2 {
 
     //Atributos
     private long mili;
 
     //Constructor
-    public Fecha() {
+    public Fecha2() {
+        mili = System.currentTimeMillis();
+    }
+    
+    public Fecha2(int num){
         mili = System.currentTimeMillis();
     }
 
@@ -41,21 +44,38 @@ public class Fecha {
         long dias = horas / 24;
         return dias;
     }
+    /**
+     * 
+     * @param num Es el número de días.
+     * @return Método diasPasados pero con parámetro día.
+     */
+    public long diasPasados(int num) {
+        long segundos = mili / 1000;
+        long horas = segundos / 3600;
+        long dias = horas / 24;
+        long rest=dias-num;
+        return rest;
+    }
 
     /**
      * @return El día que es hoy.
      */
     public void diaSemana() {
         String tiki[] = {"DOMINGO", "LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES", "SABADO"};
-        long b = mili%7;
-        System.out.println("Hoy es "+tiki[(int)b]);
+        long b = diasPasados()%7;
+        //System.out.println("Hoy es "+tiki[b]);
+        System.out.println(b);
     }
 
     ////////////////////////MAIN
     public static void main(String[] args) {
-        Fecha fecha = new Fecha();
+        Fecha2 fecha = new Fecha2();
 
         System.out.println("Han pasado " + fecha.diasPasados() + " días desde 1970.");
+        
+        Fecha2 fecha2 = new Fecha2(2171);
+        
+        System.out.println("Desde 2171 han pasado "+fecha.diasPasados(2171)+" días.");
 
         fecha.diaSemana(); //Aquí hay un fallo
 
