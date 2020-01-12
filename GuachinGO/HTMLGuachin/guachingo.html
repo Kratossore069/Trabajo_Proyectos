@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<meta charset="UTF-8">
+<title>GuachinGO</title>
+<link rel="stylesheet" type="text/css" href="./estilos.css">
+</head>
+<body class="back">
+<h1 align="center">Hoy comemos en...</h1>
+<h2 id="eleccion" align="center"></h2>
+<h1 align="center">Y se encuentra en..</h1>
+<h2 align="center" id="lugar"></h2>
+
+<script>
+
+	//Primero declaro los sitios a los que ir.
+	var sitios = ["El Albarote", "El Pico Viejo", "Casa Tomás Costillas", "Casa Doña Chana"];
+	
+	//Después hago un número aleatorio.
+	var aleatorio = (Math.floor(Math.random()*(sitios.length))+0);
+	
+	//Muestro la elección por el número aleatorio.
+	document.getElementById("eleccion").innerHTML=sitios[aleatorio];
+	
+	switch(aleatorio){
+		case 0:
+			document.getElementById("lugar").innerHTML="En Santa Úrsula";
+			break;
+		case 1:
+			document.getElementById("lugar").innerHTML="En Puerto de la Cruz";
+			break;
+		case 2:
+			document.getElementById("lugar").innerHTML="En Tacoronte";
+			break;
+		case 3:
+			document.getElementById("lugar").innerHTML="En La Laguna";
+			break;
+	}
+</script>
+</body>
+</html>
