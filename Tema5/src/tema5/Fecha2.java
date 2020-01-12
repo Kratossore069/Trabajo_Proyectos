@@ -56,15 +56,17 @@ public class Fecha2 {
         long rest=dias-num;
         return rest;
     }
+    
+    public enum Dias {DOMINGO, LUNES, MARTES, MIERCOLES, JUEVES, VIERNES, SABADO}
 
     /**
      * @return El día que es hoy.
      */
     public void diaSemana() {
+        
         String tiki[] = {"DOMINGO", "LUNES", "MARTES", "MIERCOLES", "JUEVES", "VIERNES", "SABADO"};
         long b = diasPasados()%7;
-        //System.out.println("Hoy es "+tiki[b]);
-        System.out.println(b);
+        System.out.println("Hoy es "+/*Fecha2.Dias*/tiki[(int)b]);
     }
 
     ////////////////////////MAIN
@@ -73,13 +75,15 @@ public class Fecha2 {
 
         System.out.println("Han pasado " + fecha.diasPasados() + " días desde 1970.");
         
+        fecha.diaSemana(); //Aquí hay un fallo
+
+        fecha.mostrarFecha(); //Esto está bien, pero es trampa
+        
         Fecha2 fecha2 = new Fecha2(2171);
         
         System.out.println("Desde 2171 han pasado "+fecha.diasPasados(2171)+" días.");
 
-        fecha.diaSemana(); //Aquí hay un fallo
-
-        fecha.mostrarFecha(); //Esto está bien, pero es trampa
+        
 
     }
 }
