@@ -3,6 +3,7 @@
 <meta charset="UTF-8">
 <title>GuachinGO</title>
 <link rel="stylesheet" type="text/css" href="./estilos.css">
+<link rel="icon" type="image/png" href="https://mh-2-banco-de-imagen.panthermedia.net/media/previews/0011000000/11363000/11363811_high.jpg" />
 </head>
 <body class="back">
 <h1 align="center">Hoy comemos en...</h1>
@@ -13,7 +14,7 @@
 <script>
 
 	//Primero declaro los sitios a los que ir.
-	var sitios = ["El Albarote", "El Pico Viejo", "Casa Tomás Costillas", "Casa Doña Chana"];
+	var sitios = ["El Albarote", "El Fonil", "Casa Tomás Costillas", "La Charca", "Casa Fernando"];
 	
 	//Después hago un número aleatorio.
 	var aleatorio = (Math.floor(Math.random()*(sitios.length))+0);
@@ -21,18 +22,29 @@
 	//Muestro la elección por el número aleatorio.
 	document.getElementById("eleccion").innerHTML=sitios[aleatorio];
 	
+	//Guardamos en variables.
+	var albarote='<iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d56150.56940794939!2d-16.561007677349462!3d28.406865221740844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.4098328!2d-16.4995004!4m5!1s0xc6a7fe1b09f3d33%3A0x1c3f9614a1abc3de!2sel%20albarote%20tenerife!3m2!1d28.393506!2d-16.554742!5e0!3m2!1ses!2ses!4v1578917362733!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>';
+	var fonil ='<iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d14036.231985174003!2d-16.507749618090184!3d28.41750682004812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.4098328!2d-16.4995004!4m5!1s0xc41d5192ebfb36f%3A0x26185593dae5c1fb!2sel%20fonil%20tenerife!3m2!1d28.4254839!2d-16.4940227!5e0!3m2!1ses!2ses!4v1578917507292!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>';
+	var tomas='<iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d224507.40479918825!2d-16.552249317058724!3d28.45158071718775!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.4098328!2d-16.4995004!4m5!1s0xc41cdbeca801ddb%3A0x3fdb6cd77a760b0b!2scasa%20tom%C3%A1s%20tenerife!3m2!1d28.493080499999998!2d-16.355052!5e0!3m2!1ses!2ses!4v1578917563245!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>';
+	var charca = '<iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d224506.98259454305!2d-16.51375821703928!3d28.451779566863237!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.4098328!2d-16.4995004!4m5!1s0xc41cbc20f64ef91%3A0xa71af41d6b2518a1!2sla%20charca%20tenerife!3m2!1d28.5095347!2d-16.229512!5e0!3m2!1ses!2ses!4v1578917618949!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>';
+	var fernan='<iframe src="https://www.google.com/maps/embed?pb=!1m26!1m12!1m3!1d14035.803389029632!2d-16.504530418089022!3d28.420739970027476!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m11!3e6!4m3!3m2!1d28.4098328!2d-16.4995004!4m5!1s0xc41d4e2fc74367d%3A0xb9c87fd663b12a28!2scasa%20fernando%20tenerife!3m2!1d28.431949999999997!2d-16.485117!5e0!3m2!1ses!2ses!4v1578917677828!5m2!1ses!2ses" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>';
+	
+	//De manera aleatoria, se despliega ese sitio.
 	switch(aleatorio){
 		case 0:
-			document.getElementById("lugar").innerHTML="En Santa Úrsula";
+			document.getElementById("lugar").innerHTML=albarote;
 			break;
 		case 1:
-			document.getElementById("lugar").innerHTML="En Puerto de la Cruz";
+			document.getElementById("lugar").innerHTML=fonil;
 			break;
 		case 2:
-			document.getElementById("lugar").innerHTML="En Tacoronte";
+			document.getElementById("lugar").innerHTML=tomas;
 			break;
 		case 3:
-			document.getElementById("lugar").innerHTML="En La Laguna";
+			document.getElementById("lugar").innerHTML=charca;
+			break;
+		case 4:
+			document.getElementById("lugar").innerHTML=fernan;
 			break;
 	}
 </script>
