@@ -5,42 +5,70 @@
  */
 package tema5;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 /**
  *
  * @author Víctor Gabriel Carvajal Aróstegui
  */
 public class MainNodo {
+     public int dato;
+    Nodo next;
+
     public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        int el;
+        int numeros[] = new int[100];
+
+        int i = 0;
+        do {
+
+            System.out.println("Número "+(i+1)+", 999 para salir.");
+            el = sc.nextInt();
+
+            if (el != 999) {
+                numeros[i] = el;
+                i++;
+            }
+
+        } while (el != 999);
+
+        System.out.println("Array en orden: "); 
+        Arrays.sort(numeros);//Método para ordenador números en un array.
+        for (int a : numeros) {
+            if (a != 0) {
+                System.out.print(a+" ");
+            }
+        }
+
+        System.out.println("");
         
-        Nodo inicio = new Nodo();
-        inicio.dato=3;
+       /* System.out.println("Inserte tres números");
+        Nodo a = new Nodo();
         
-        Nodo dato1 = new Nodo();
-        dato1.dato = 9;
+        a.dato = sc.nextInt();
         
-        inicio.next = dato1;
+        Nodo b = new Nodo();
         
-        Nodo dato2 = new Nodo();
-        dato2.dato = 23;
+        b.dato = sc.nextInt();
         
-        dato1.next = dato2;
+        a.next = b;
+        
+        Nodo c = new Nodo();
+        
+        c.dato = sc.nextInt();
+        
+        b.next = c;
+        
         
         //Recorrer lista
-        Nodo recorrer = inicio; //Apuntador para recorrer la lista
+        Nodo recorrer = a; //Apuntador para recorrer la lista
+        System.out.println("Se muestran los números introducidos");
         while(recorrer != null){
             System.out.println(recorrer.dato);
             recorrer = recorrer.next;
-        }
-        
-        while(inicio != null){
-            System.out.println(inicio.dato);
-            inicio = inicio.next;
-        }
-        
-        //12
-        Nodo dato3 = new Nodo();
-        dato3.dato = 12;
-        
-        //dato1.
+        }*/
     }
 }
