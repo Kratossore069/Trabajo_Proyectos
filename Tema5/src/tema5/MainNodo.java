@@ -5,20 +5,41 @@
  */
 package tema5;
 
+import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Scanner;
+import java.util.Comparator;
+import java.util.Iterator;
+import java.util.List;
 
 /**
  *
  * @author Víctor Gabriel Carvajal Aróstegui
  */
 public class MainNodo {
-     public int dato;
+
+    public int dato;
     Nodo next;
 
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
+        List lista = new ArrayList();
+
+        lista.add(56);
+        lista.add(45);
+        lista.add(78);
+        lista.add(90);
+        lista.add(14);
+        
+        
+        Iterator iterador = lista.iterator();
+
+        while (iterador.hasNext()) {
+            System.out.print(iterador.next()+" ");
+        }
+        System.out.println("");
+    }
+
+    /*Scanner sc = new Scanner(System.in);
         int el;
         int numeros[] = new int[100];
 
@@ -43,9 +64,8 @@ public class MainNodo {
             }
         }
 
-        System.out.println("");
-        
-       /* System.out.println("Inserte tres números");
+        System.out.println("");*/
+ /*System.out.println("Inserte tres números");
         Nodo a = new Nodo();
         
         a.dato = sc.nextInt();
@@ -70,5 +90,5 @@ public class MainNodo {
             System.out.println(recorrer.dato);
             recorrer = recorrer.next;
         }*/
-    }
 }
+
