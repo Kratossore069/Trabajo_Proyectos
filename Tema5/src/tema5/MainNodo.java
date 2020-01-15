@@ -6,8 +6,6 @@
 package tema5;
 
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Comparator;
 import java.util.Iterator;
 import java.util.List;
 
@@ -42,20 +40,15 @@ public class MainNodo {
     /*Scanner sc = new Scanner(System.in);
         int el;
         int numeros[] = new int[100];
-
         int i = 0;
         do {
-
             System.out.println("Número "+(i+1)+", 999 para salir.");
             el = sc.nextInt();
-
             if (el != 999) {
                 numeros[i] = el;
                 i++;
             }
-
         } while (el != 999);
-
         System.out.println("Array en orden: "); 
         Arrays.sort(numeros);//Método para ordenador números en un array.
         for (int a : numeros) {
@@ -63,7 +56,6 @@ public class MainNodo {
                 System.out.print(a+" ");
             }
         }
-
         System.out.println("");*/
  /*System.out.println("Inserte tres números");
         Nodo a = new Nodo();
@@ -91,4 +83,3 @@ public class MainNodo {
             recorrer = recorrer.next;
         }*/
 }
-
