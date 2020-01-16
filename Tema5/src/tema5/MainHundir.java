@@ -19,6 +19,9 @@ public class MainHundir {
         
         juego.addBarco(5, 2);
         juego.addBarco(4, 4);
+        
+        juego.disparo(4, 4);
+        juego.disparo(5, 1);
         juego.mostrarTablero();
         
     }

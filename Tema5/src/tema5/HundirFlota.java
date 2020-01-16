@@ -75,6 +75,37 @@ public class HundirFlota {
             System.out.println("");
         }*/
     }
+    
+    /**
+     * 
+     * @param fila
+     * @param columna 
+     * @return Aquí se quita un barco, en caso contrario
+     * saldrá un mensaje que ponga que no hay barco.
+     */
+    public void deleteBarco(int fila, int columna){
+        if(this.array[fila][columna]!=0){
+           this.array[fila][columna]=0; 
+        }else{
+            System.out.println("No hay un barco en ["+fila+","+columna+"]");
+        }
+    }
+    
+    /**
+     * 
+     * @param fila
+     * @param columna 
+     * @return Disparo realizado.
+     */
+    public void disparo(int fila, int columna){
+        if(this.array[fila][columna]==1){
+           this.array[fila][columna]=9;
+           System.out.println("Barco alcanzado en ["+fila+","+columna+"]");
+        }else{
+            this.array[fila][columna]=9;
+            System.out.println("No hay un barco en ["+fila+","+columna+"]");
+        }
+    }
 
     
 }
