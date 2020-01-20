@@ -65,15 +65,12 @@ public class HundirFlota {
      * el tablero con el barco puesto.
      */
     public void addBarco(int fila, int columna){
-        int inicial = 1;
-        this.array[fila][columna] = inicial;
-        /*for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[0].length; j++) {
-                array[fila][columna] = inicial;
-                System.out.print(array[i][j]+" ");
-            }
-            System.out.println("");
-        }*/
+        int inicial=1;
+        if(this.array[fila][columna]==1){
+            System.out.println("Aquí en ["+fila+","+columna+"] ya hay un barco.");
+        }else{
+            this.array[fila][columna] = inicial;
+        }
     }
     
     /**
