@@ -5,8 +5,6 @@
  */
 package tema5;
 
-import java.util.Random;
-
 /**
  *
  * @author Víctor Gabriel Carvajal Aróstegui
@@ -30,27 +28,6 @@ public class HundirFlota {
     }
 
     //Métodos.
-    
-    /**
-     * Disparo aleatorio por el ordenador.
-     */
-    public void disparoAleatorio(){
-        
-        Random rd = new Random();
-        int disparo1 = rd.nextInt(this.dimensiones);
-        int disparo2 = rd.nextInt(this.dimensiones);
-        
-        System.out.println("Disparo aleatorio en ["+disparo1+","+disparo2+"]");
-        
-        if(this.array[disparo1][disparo2]==1){
-            this.array[disparo1][disparo2] = 5;
-            System.out.println("La IA ha dado a un barco.");
-        }else{
-            this.array[disparo1][disparo2] = 5;
-            System.out.println("La IA ha fallado...");
-        }
-        
-    }
     
 
     /**
@@ -88,12 +65,15 @@ public class HundirFlota {
      * el tablero con el barco puesto.
      */
     public void addBarco(int fila, int columna){
-        int inicial=1;
-        if(this.array[fila][columna]==1){
-            System.out.println("Aquí en ["+fila+","+columna+"] ya hay un barco.");
-        }else{
-            this.array[fila][columna] = inicial;
-        }
+        int inicial = 1;
+        this.array[fila][columna] = inicial;
+        /*for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[0].length; j++) {
+                array[fila][columna] = inicial;
+                System.out.print(array[i][j]+" ");
+            }
+            System.out.println("");
+        }*/
     }
     
     /**

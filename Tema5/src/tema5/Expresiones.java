@@ -13,25 +13,28 @@ import java.util.regex.Pattern;
  * @author Víctor Gabriel Carvajal Aróstegui
  */
 public class Expresiones {
-    
-    //imniciales dle primer apellido y del segundo año de acnimeinto mes de animcimento dia de nacimeinto sexo
 
+    //imniciales dle primer apellido y del segundo año de acnimeinto mes de animcimento dia de nacimeinto sexo
     public static void main(String[] args) {
-        
-        Pattern p = Pattern.compile("([A-Z]{1}[a-z])([0-9]{4})([0-9]{2})([0-9]{2})([MH])");
-        
-        Matcher m = p.matcher("Garcia123 123Labrador Perro20051994 DobladoH");
-        
-        while (m.find()) {
-            System.out.println("Iniciales del primer apellido:" + m.group(1));
-            System.out.println("Iniciales del segundo apellido:" + m.group(1));
-            System.out.println("Año de nacimiento:" + m.group(2));
-            System.out.println("Mes de nacimiento:" + m.group(3));
-            System.out.println("Día de nacimiento:" + m.group(4));
-            System.out.println("Sexo:" + m.group(5));
-        }
-        
-       /* Pattern a = Pattern.compile("([A-Z]{1}[a-z])");
+
+       /* Pattern p = Pattern.compile(
+                "^([A-Z]{1}[a-z])"
+                + "([0-9]{2})"
+                + "((0[1-9])|(1[012]))"
+                + "(([0-6][0-9])|(7[01]))"
+                + "([MH])"
+        );
+
+        Matcher m = p.matcher("PRRD120451");
+
+        m.find();
+        System.out.println("Iniciales del primer apellido:" + m.group(1));
+        System.out.println("Año de nacimiento:" + m.group(2));
+        System.out.println("Mes de nacimiento:" + m.group(3));
+        System.out.println("Día de nacimiento:" + m.group(4));
+        System.out.println("Sexo:" + m.group(5));*/
+
+        Pattern a = Pattern.compile("([A-Z]{1}[a-z])");
         
         Pattern b = Pattern.compile("([0-9]{4})");
         
@@ -41,7 +44,7 @@ public class Expresiones {
         
         
         
-        Matcher m = a.matcher("Garcia1234 Lorenzo123");
+        Matcher m = a.matcher("1234Garcia Lorenzo123");
         
         while(m.find()){
             System.out.println("Iniciales del primer apellido:" + m.group(1));
@@ -65,6 +68,7 @@ public class Expresiones {
         
         while(p.find()){
             System.out.println("Sexo:" + p.group(1));
-        }*/
+        }
     }
+
 }
