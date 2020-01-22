@@ -30,5 +30,41 @@ public class Expresiones {
             System.out.println("Día de nacimiento:" + m.group(4));
             System.out.println("Sexo:" + m.group(5));
         }
+        
+       /* Pattern a = Pattern.compile("([A-Z]{1}[a-z])");
+        
+        Pattern b = Pattern.compile("([0-9]{4})");
+        
+        Pattern c = Pattern.compile("([0-9]{2})");
+        
+        Pattern d = Pattern.compile("([MH])");
+        
+        
+        
+        Matcher m = a.matcher("Garcia1234 Lorenzo123");
+        
+        while(m.find()){
+            System.out.println("Iniciales del primer apellido:" + m.group(1));
+            System.out.println("Iniciales del segundo apellido:" + m.group(1));
+        }
+        
+        Matcher n = b.matcher("Perro20051994");
+        
+        while(n.find()){
+            System.out.println("Año de nacimiento:" + n.group(1));
+        }
+        
+        Matcher o = c.matcher("Perro20051994");
+        
+        while(o.find()){
+            System.out.println("Mes de nacimiento:" + o.group(1));
+            System.out.println("Dia de nacimiento:" + o.group(1));
+        }
+        
+        Matcher p = d.matcher("HPerro20051994");
+        
+        while(p.find()){
+            System.out.println("Sexo:" + p.group(1));
+        }*/
     }
 }
