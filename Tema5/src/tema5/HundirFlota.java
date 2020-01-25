@@ -67,13 +67,6 @@ public class HundirFlota {
     public void addBarco(int fila, int columna){
         int inicial = 1;
         this.array[fila][columna] = inicial;
-        /*for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[0].length; j++) {
-                array[fila][columna] = inicial;
-                System.out.print(array[i][j]+" ");
-            }
-            System.out.println("");
-        }*/
     }
     
     /**
@@ -105,6 +98,11 @@ public class HundirFlota {
             this.array[fila][columna]=9;
             System.out.println("No hay un barco en ["+fila+","+columna+"]");
         }
+    }
+    
+    public int disparoAle(int fila, int columna){
+       this.array[fila][columna]=9;
+        return 1;
     }
 
     
