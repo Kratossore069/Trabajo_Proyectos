@@ -13,7 +13,6 @@ import java.util.Scanner;
  * @author Víctor Gabriel Carvajal Aróstegui
  */
 public class MainHundir {
-    //Main del programa
 
     public static void main(String[] args) {
 
@@ -57,23 +56,30 @@ public class MainHundir {
 
         Random rd = new Random();
 
-        
-
         System.out.println("Se ha disparado 5 veces y el tablero queda así: \n0 es agua\n1 es un barco\n9 es un disparo\n");
-        
+
         int ale1 = rd.nextInt(casillas), ale2 = rd.nextInt(casillas);
-        juego.disparo(ale1, ale2);
-        ale1 = rd.nextInt(casillas); ale2 = rd.nextInt(casillas);
-        juego.disparo(ale1, ale2);
-        ale1 = rd.nextInt(casillas); ale2 = rd.nextInt(casillas);
-        juego.disparo(ale1, ale2);
-        ale1 = rd.nextInt(casillas); ale2 = rd.nextInt(casillas);
-        juego.disparo(ale1, ale2);
-        ale1 = rd.nextInt(casillas); ale2 = rd.nextInt(casillas);
-        juego.disparo(ale1, ale2);
         
+        juego.disparo(ale1, ale2);
+        ale1 = rd.nextInt(casillas);
+        ale2 = rd.nextInt(casillas);
+        
+        juego.disparo(ale1, ale2);
+        ale1 = rd.nextInt(casillas);
+        ale2 = rd.nextInt(casillas);
+        
+        juego.disparo(ale1, ale2);
+        ale1 = rd.nextInt(casillas);
+        ale2 = rd.nextInt(casillas);
+        
+        juego.disparo(ale1, ale2);
+        ale1 = rd.nextInt(casillas);
+        ale2 = rd.nextInt(casillas);
+        
+        juego.disparo(ale1, ale2);
+
         System.out.println("");
-        
+
         juego.mostrarTablero();
 
     }
