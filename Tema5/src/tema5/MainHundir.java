@@ -81,6 +81,10 @@ public class MainHundir {
         System.out.println("");
 
         juego.mostrarTablero();
+        
+        
+        
+        
 
     }
 }
