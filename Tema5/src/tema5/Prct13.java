@@ -81,9 +81,9 @@ public class Prct13 {
                    finalizar = true;
                    break;
                case 5:
-                   for (i = 0; i < lk.size(); i++) {
+                  /* for (int i = 0; i < lk.size(); i++) {
                        System.out.println(lk.get(i));
-                   }
+                   }*/
                    break;
            }
         }while(!finalizar);

@@ -6,8 +6,6 @@
 package tema5;
 
 import java.util.Scanner;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 /**
  *
@@ -25,38 +23,6 @@ public class Prct09 {
         
         Scanner sc = new Scanner(System.in);
         
-        //^[-+]?[0-9]+,?
-        
-
-        System.out.println("Introduzca el numero: ");
-
-        String numerosolo = sc.nextLine();
-
-        Pattern numero = Pattern.compile("(^[-+]?[0-9]+,?[0-9]+)");
-
-        Matcher num = numero.matcher(numerosolo);
-
-        if(num.find()){
-            System.out.println("Sale "+numerosolo);
-        }else{
-            System.out.println("Error");
-        }
-
-        //////////////////////////////////
-
-        System.out.println("Introduzca un número con letras: ");
-
-        String numerocompania = sc.nextLine();
-
-        Pattern numerillo = Pattern.compile("(^[0-9]+[A-Za-z]*$)");
-
-        Matcher numer = numerillo.matcher(numerocompania);
-
-        if(numer.find()){
-            System.out.println("Sale "+numerocompania);
-        }else{
-            System.out.println("Error");
-        }
         //^[-+]?[0-9]+,?
         
     }

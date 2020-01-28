@@ -5,16 +5,12 @@
  */
 package tema5;
 
-import java.util.Random;
-
 /**
  *
  * @author Víctor Gabriel Carvajal Aróstegui
  */
 public class Pruebas {
     public static void main(String[] args) {
-        Random rd = new Random();
-        int ale = rd.nextInt(6);
-        System.out.println(ale);
+        System.out.println();
     }
 }
