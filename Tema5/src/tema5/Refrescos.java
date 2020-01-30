@@ -16,7 +16,7 @@ import java.util.ArrayList;
 public class Refrescos {
 
     public static void main(String[] args) {
-       /* System.out.println("Welcome");
+        System.out.println("Welcome");
         Scanner sc = new Scanner(System.in);
         ArrayList<Pair<String, Float>> refrescos = new ArrayList<Pair<String, Float>>();
         String nombre="";
@@ -38,30 +38,6 @@ public class Refrescos {
         
         for (Pair<String, Float> bebidas : refrescos) {
             System.out.println(bebidas);
-        }*/
-       
-       ArrayList<Pair<String, Integer>> comidas = new ArrayList<Pair<String, Integer>>();
-       
-       String comida = "";
-       int precio;
-       Scanner sc = new Scanner(System.in);
-       
-       int i=0;
-       do{
-           System.out.println("Comida número: "+(i+1));
-           comida = sc.nextLine();
-           if(comida.equals("salir")){
-               System.out.println("Saliendo...");
-           }else{
-               System.out.println("Precio: ");
-               precio = sc.nextInt();sc.nextLine();
-               comidas.add(new Pair<String, Integer>(comida, precio));
-               i++;
-           }
-       }while(!comida.equals("salir"));
-       
-        for (Pair<String, Integer> comida1 : comidas) {
-            System.out.println(comida1);
         }
     }
 
