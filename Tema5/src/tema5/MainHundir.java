@@ -36,20 +36,25 @@ public class MainHundir {
             fila = sc.nextInt();sc.nextLine();
             columna = sc.nextInt();sc.nextLine();
             juego2.addBarco(fila, columna);
+            System.out.println("");
             
             System.out.println("La IA pone barco");
             juego2.addBarcoIa(rd.nextInt(num), rd.nextInt(num));
+            System.out.println("");
             
             System.out.println("Jugador dispara");
             disp1 = sc.nextInt();sc.nextLine();
             disp2 = sc.nextInt();sc.nextLine();
             juego2.disparoTuyo(disp1, disp2);
+            System.out.println("");
             
             System.out.println("Disparo aleatorio de la IA");
             juego2.disparo(rd.nextInt(num), rd.nextInt(num));
+            System.out.println("");
             
             System.out.println("0 es agua\n1 es tu barco\n2 es barco de la IA\n9 son disparos de la IA\n8 son disparos tuyos\n");
             juego2.mostrarTablero();
+            System.out.println("");
             
             System.out.println("¿Salir?");
             salir = sc.nextLine();
