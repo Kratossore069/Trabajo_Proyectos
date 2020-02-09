@@ -21,4 +21,9 @@ public class CuentaBancaria {
     private ArrayList<Movimiento> movimiento;
     private HashMap<Date, Movimiento> mov;
     
+    public CuentaBancaria(){
+        
+    }
+    
+    
 }
