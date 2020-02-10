@@ -18,10 +18,44 @@ public class MainCuenta {
         Movimiento move = new Movimiento();
         Scanner sc = new Scanner(System.in);
     
-        System.out.println("¿Asunto?");
-        String asunto = sc.nextLine();
-        move.asunto(asunto);
+        System.out.println("Bienvenido a su banco, ¿qué desea hacer?");
+        int opcion, dinero;
         
-        move.mostrar();
+        do{
+            System.out.println("1)Ingresar dinero\n2)Retirar dinero\n3)Consultar movimientos\n4)Salir");
+            System.out.println("");
+            opcion=sc.nextInt();sc.nextLine();
+            
+            switch(opcion){
+                case 1:
+                    System.out.println("Dinero a ingresar: ");
+                    dinero = sc.nextInt();
+                    move.ingresarDinero(dinero);
+                    System.out.println("");
+                    break;
+                    
+                case 2:
+                    System.out.println("Dinero a retirar: ");
+                    dinero = sc.nextInt();
+                    move.sacarDinero(dinero);
+                    System.out.println("");
+                    break;
+                    
+                case 3:
+                    System.out.println("MOVIMIENTOS");
+                    move.mostrar();
+                    System.out.println("");
+                    break;
+                    
+                case 4:
+                    System.out.println("Saliendo de tu banco...");
+                    break;
+                    
+                default:
+                    System.out.println("No hay "+opcion+" opciones.");
+                    break;
+            }
+            
+        }while(opcion!=4);
     }
 }

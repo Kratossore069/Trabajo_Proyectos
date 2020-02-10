@@ -27,16 +27,16 @@ public class Movimiento {
     
     //MÉTODOS
     
-    public void asunto(String a){
-        asunto = a;
+    public void sacarDinero(int a){
+        if(cuantia <= 0){
+            System.out.println("No puedes sacar dinero porque no tienes.");
+        }else{
+            cuantia -= a;
+        }
     }
     
-    public void fecha(){
-        
-    }
-    
-    public void dinero(double dinero){
-        cuantia += dinero;
+    public void ingresarDinero(int a){
+        cuantia += a;
     }
     
     public void mostrar(){
