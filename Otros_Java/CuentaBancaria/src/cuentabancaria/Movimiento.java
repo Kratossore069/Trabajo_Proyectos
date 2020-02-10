@@ -39,10 +39,18 @@ public class Movimiento {
         cuantia += a;
     }
     
+    public void asunto(String a){
+        asunto = a;
+    }
+    
     public void mostrar(){
         System.out.println("Asunto: "+asunto+"\n"
                 + "Fecha: "+fecha+"\n"
                 + "Dinero: "+cuantia+"\n");
+    }
+    
+    public void fecha(Date a){
+        fecha = a;
     }
     
     //GETTER Y SETTER

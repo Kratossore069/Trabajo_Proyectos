@@ -5,6 +5,7 @@
  */
 package cuentabancaria;
 
+import java.util.Date;
 import java.util.Scanner;
 
 /**
@@ -17,9 +18,11 @@ public class MainCuenta {
     public static void main(String[] args) {
         Movimiento move = new Movimiento();
         Scanner sc = new Scanner(System.in);
+        Date fecha;
     
         System.out.println("Bienvenido a su banco, ¿qué desea hacer?");
         int opcion, dinero;
+        String asunto="";
         
         do{
             System.out.println("1)Ingresar dinero\n2)Retirar dinero\n3)Consultar movimientos\n4)Salir");
@@ -29,15 +32,23 @@ public class MainCuenta {
             switch(opcion){
                 case 1:
                     System.out.println("Dinero a ingresar: ");
-                    dinero = sc.nextInt();
+                    dinero = sc.nextInt();sc.nextLine();
+                    System.out.println("Asunto del ingreso");
+                    asunto = sc.nextLine();
                     move.ingresarDinero(dinero);
+                    move.asunto(asunto);
+                    move.fecha(new Date());
                     System.out.println("");
                     break;
                     
                 case 2:
                     System.out.println("Dinero a retirar: ");
-                    dinero = sc.nextInt();
+                    dinero = sc.nextInt();sc.nextLine();
+                    System.out.println("Asunto del retiro");
+                    asunto = sc.nextLine();
                     move.sacarDinero(dinero);
+                    move.asunto(asunto);
+                    move.fecha(new Date());
                     System.out.println("");
                     break;
                     
