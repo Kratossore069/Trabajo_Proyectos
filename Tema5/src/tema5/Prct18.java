@@ -16,7 +16,7 @@ public class Prct18 {
     /*
     Práctica 18: Práctica de autoaprendizaje: Buscar información sobre las 3 estructuras que
 acabamos de nombrar. Mostrar algún ejemplo respecto a los métodos: addAll(),
-removeAll(), retainAll()
+removeAll(), retainAll() y práctica 19 es igual
      */
     public static void main(String[] args) {
 
