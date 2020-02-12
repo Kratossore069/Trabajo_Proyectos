@@ -32,7 +32,7 @@ public class FechaTest {
     @Parameters
     public static Collection<Object[]> numeros() {
         return Arrays.asList(new Object[][]{
-            {1,2,3,4},{1,2,3,4},{1,2,3,4},{1,2,3,4}
+            {1},{2},{3},{4}
         });
     }
 
@@ -41,7 +41,7 @@ public class FechaTest {
 
         System.out.println("DevuelveFecha");
         Fecha instance = new Fecha();
-        String esperado = "";
+        String esperado = "ERROR";
         String resultado = instance.DevuelveFecha(num);
         assertEquals(esperado, resultado); //Esperado y real.
 
