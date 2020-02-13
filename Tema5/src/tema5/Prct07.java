@@ -28,5 +28,21 @@ mostrar casos en los que es útil el uso de esos métodos y como usarlos.*/
         
         //Append
         
+        sb.append("hola"); //Inserta al final algo
+        
+        System.out.println(sb);
+        
+        //Insert
+        
+        sb.insert(0, true); //Agrega a cierto punto un String o lo que sea
+        
+        System.out.println(sb);
+        
+        //Replace
+        
+        sb.replace(0, 5, palindrome); //Reemplaza de un punto a otro la frase que aparece
+        
+        System.out.println(sb);
+        
     }
 }
