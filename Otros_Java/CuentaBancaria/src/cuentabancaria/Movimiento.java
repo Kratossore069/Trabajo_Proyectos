@@ -6,6 +6,7 @@
 package cuentabancaria;
 
 import java.util.Date;
+import java.util.HashMap;
 
 /**
  *
@@ -18,11 +19,12 @@ public class Movimiento {
     private double cuantia;
     private Date fecha;
     public String asunto;
+    private HashMap<String, Double> mov;
     
     //CONSTRUCTOR
     
     public Movimiento(){
-        
+        mov = new HashMap<String, Double>();
     }
     
     //MÉTODOS
@@ -44,13 +46,17 @@ public class Movimiento {
     }
     
     public void mostrar(){
-        System.out.println("Asunto: "+asunto+"\n"
-                + "Fecha: "+fecha+"\n"
-                + "Dinero: "+cuantia+"\n");
+        for(String datos : mov.keySet()){ //< ----- Y aquí se muestran
+            System.out.println("Asunto: "+datos+" Dinero: "+mov.get(datos));
+        }
     }
     
     public void fecha(Date a){
         fecha = a;
+    }
+    
+    public void aniadirMovimientos(String a, double b){ //<---- Se recogen aquí uno por uno
+        mov.put(a, b);
     }
     
     //GETTER Y SETTER

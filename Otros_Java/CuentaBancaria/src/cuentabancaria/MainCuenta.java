@@ -15,13 +15,18 @@ import java.util.Scanner;
 public class MainCuenta {
     
     
+    //CuentaBancaria no la estoy usando para nada de momento
+    
     public static void main(String[] args) {
         Movimiento move = new Movimiento();
+        CuentaBancaria cuenta = new CuentaBancaria();
+        
         Scanner sc = new Scanner(System.in);
         Date fecha;
     
         System.out.println("Bienvenido a su banco, ¿qué desea hacer?");
-        int opcion, dinero;
+        int opcion; 
+        double dinero;
         String asunto="";
         
         do{
@@ -32,30 +37,54 @@ public class MainCuenta {
             switch(opcion){
                 case 1:
                     System.out.println("Dinero a ingresar: ");
-                    dinero = sc.nextInt();sc.nextLine();
+                    
+                    dinero = sc.nextDouble();sc.nextLine();
+                    
                     System.out.println("Asunto del ingreso");
+                    
                     asunto = sc.nextLine();
-                    move.ingresarDinero(dinero);
+                    
+                    move.ingresarDinero((int)dinero);
+                    
                     move.asunto(asunto);
+                    
                     move.fecha(new Date());
+                    
+                    move.aniadirMovimientos(asunto, dinero); //<---- Guardar los datos en un HashMap
+                    
                     System.out.println("");
+                    
                     break;
                     
                 case 2:
                     System.out.println("Dinero a retirar: ");
-                    dinero = sc.nextInt();sc.nextLine();
+                    
+                    dinero = sc.nextDouble();sc.nextLine(); //<---- Lo mismo que arriba
+                    
                     System.out.println("Asunto del retiro");
+                    
                     asunto = sc.nextLine();
-                    move.sacarDinero(dinero);
+                    
+                    move.sacarDinero((int)dinero);
+                    
                     move.asunto(asunto);
+                    
                     move.fecha(new Date());
+                    
+                    move.aniadirMovimientos(asunto, dinero); //<---- Guardar los datos en un HashMap
+                    
                     System.out.println("");
+                    
                     break;
                     
                 case 3:
                     System.out.println("MOVIMIENTOS");
-                    move.mostrar();
+                    
+                    
+                    move.mostrar(); //<----- Aquí se muestra la magia
+                    
                     System.out.println("");
+                    
                     break;
                     
                 case 4:
