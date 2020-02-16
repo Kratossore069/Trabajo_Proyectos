@@ -81,7 +81,7 @@ public class MainCuenta {
                     System.out.println("MOVIMIENTOS");
                     
                     
-                    move.mostrar(); //<----- Aquí se muestra la magia
+                    cuenta.mostrarCuentas(); //<----- Aquí se muestra la magia
                     
                     System.out.println("");
                     
