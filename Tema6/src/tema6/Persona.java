@@ -9,23 +9,18 @@ package tema6;
  *
  * @author Víctor Gabriel Carvajal Aróstegui
  */
-
 //Práctica 12 junto con 15 junto con 13
+final class Hombre extends Persona {
 
-
-
-
-final class Hombre extends Persona{
-    
-    public Hombre(String nombre, String apellidos, int edad, int altura, double peso){
+    public Hombre(String nombre, String apellidos, int edad, int altura, double peso) {
         super(nombre, apellidos, edad, altura, peso);
         tieneBarba = true;
     }
-    
+
     @Override
-    double calcularPesoIdeal(){
+    double calcularPesoIdeal() {
         double k = 4;
-        double res = altura - 100 - ((100-150)/k);
+        double res = altura - 100 - ((100 - 150) / k);
         return res;
     }
 
@@ -33,22 +28,19 @@ final class Hombre extends Persona{
     public String toString() {
         return "Hombre{" + '}';
     }
-    
-    
-    
+
 }
 
+class Mujer extends Persona {
 
-class Mujer extends Persona{
-    
-    public Mujer(String nombre, String apellidos, int edad, int altura, double peso){
+    public Mujer(String nombre, String apellidos, int edad, int altura, double peso) {
         super(nombre, apellidos, edad, altura, peso);
     }
-    
+
     @Override
-    double calcularPesoIdeal(){
+    double calcularPesoIdeal() {
         double k = 4;
-        double res = altura - 100 - ((100-150)/k);
+        double res = altura - 100 - ((100 - 150) / k);
         return res;
     }
 
@@ -56,15 +48,10 @@ class Mujer extends Persona{
     public String toString() {
         return "Mujer{" + '}';
     }
-    
-    
-    
+
 }
 
-
-
-
-abstract class Persona {
+abstract class Persona implements Ordenable<Persona> {
 
     String nombre;
     String apellidos;
@@ -72,16 +59,16 @@ abstract class Persona {
     int altura;
     double peso;
     boolean tieneBarba;
-    
-    public Persona(){}
-    
-    abstract double calcularPesoIdeal();
-    
-    protected final double calcularIMC(){
-        double alturam = altura/100.0;
-        return peso/(alturam*alturam);
+
+    public Persona() {
     }
 
+    abstract double calcularPesoIdeal();
+
+    protected final double calcularIMC() {
+        double alturam = altura / 100.0;
+        return peso / (alturam * alturam);
+    }
 
     public Persona(String nombre, String apellidos, int edad, int altura, double peso) {
         this.nombre = nombre;
@@ -90,19 +77,22 @@ abstract class Persona {
         this.altura = altura;
         this.peso = peso;
     }
-    
-    
-    
-    //public double 
-        
-    
 
     @Override
-    public String toString() {
-        return super.toString(); //To change body of generated methods, choose Tools | Templates.
+    public boolean esMenorQue(Persona or) {
+        return or.edad < this.edad;
     }
+
+    @Override
+    public boolean esIgualQue(Persona or) {
+        return or.edad == this.edad;
+    }
+
+    @Override
+    public boolean esMayorQue(Persona or) {
+        return or.edad > this.edad;
+    }
+
     
-    
-    
-    
+
 }
