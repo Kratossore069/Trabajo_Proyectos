@@ -5,6 +5,8 @@
  */
 package tema6;
 
+import com.sun.javafx.collections.ElementObservableListDecorator;
+
 /**
  *
  * @author Víctor Gabriel Carvajal Aróstegui
@@ -53,6 +55,9 @@ public class Prct14 {
      */
 
     public static void main(String[] args) {
+        Vehiculo a[] = new Vehiculo[1];
         
+        a.matricula = "123A";
+        ElementObservableListDecorator
     }
 }
