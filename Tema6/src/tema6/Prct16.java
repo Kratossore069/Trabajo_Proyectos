@@ -52,6 +52,7 @@ class Jugador extends ProfesionalBaloncesto{
     Posiciones posicion;
     int partidosJugados;
     String equipo;
+    String nombre;
 
     @Override
     public String toString() {
@@ -59,6 +60,72 @@ class Jugador extends ProfesionalBaloncesto{
                 + ", partidosJugados=" + partidosJugados + ""
                 + ", equipo=" + equipo + '}';
     }
+
+    public Posiciones getPosicion() {
+        return posicion;
+    }
+
+    public void setPosicion(Posiciones posicion) {
+        this.posicion = posicion;
+    }
+
+    public int getPartidosJugados() {
+        return partidosJugados;
+    }
+
+    public void setPartidosJugados(int partidosJugados) {
+        this.partidosJugados = partidosJugados;
+    }
+
+    public String getEquipo() {
+        return equipo;
+    }
+
+    public void setEquipo(String equipo) {
+        this.equipo = equipo;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public double getIngresosAnuales() {
+        return ingresosAnuales;
+    }
+
+    public void setIngresosAnuales(double ingresosAnuales) {
+        this.ingresosAnuales = ingresosAnuales;
+    }
+
+    public int getNumeroFederado() {
+        return numeroFederado;
+    }
+
+    public void setNumeroFederado(int numeroFederado) {
+        this.numeroFederado = numeroFederado;
+    }
+    
+    
     
     
     
