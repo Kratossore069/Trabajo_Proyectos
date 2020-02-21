@@ -21,15 +21,7 @@ abstract class Garaje{
         this.nombre = nombre;
     }
 
-    @Override
-    public String toString() {
-        return "Garaje{" + "matricula=" + matricula + ", nombre=" + nombre + '}';
-    }
-    
-    
-    
-    
-    
+   
 }
 
 class Cochito extends Garaje{
@@ -39,13 +31,8 @@ class Cochito extends Garaje{
     }
 
     
-    
-    
-    
 }
 
 
 
-public class Intento {
-    
-}
+public class Intento {}
