@@ -21,7 +21,11 @@ abstract class Garaje{
         this.nombre = nombre;
     }
 
-   
+    @Override
+    public String toString() {
+        return "Garaje{" + "matricula=" + matricula + ", nombre=" + nombre + '}';
+    }
+     
 }
 
 class Cochito extends Garaje{
@@ -30,9 +34,17 @@ class Cochito extends Garaje{
         super(matricula, nombre);
     }
 
+    @Override
+    public String toString() {
+        return super.toString(); //Para que al hacer sout funcione
+    }
     
+    
+
 }
 
 
 
-public class Intento {}
+public class Intento {
+    
+}

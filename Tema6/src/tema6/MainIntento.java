@@ -39,6 +39,6 @@ public class MainIntento {
             System.out.println(coch.matricula); //Lo mostramos
         }
         
-        //System.out.println(coches);
+        System.out.println(coches);
     }
 }
