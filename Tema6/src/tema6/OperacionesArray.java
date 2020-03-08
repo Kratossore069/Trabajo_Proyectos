@@ -35,8 +35,16 @@ public class OperacionesArray<T> {
         return res;
     }
 
-    ArrayList<Integer> filtrado(Integer[] array, Filtrar<Integer> lambda) {
-        return null;
+    
+    
+    ArrayList<T> filtrado(T array[], Filtrar fil){
+        ArrayList<T> arr = new ArrayList<>(); //Respuesta
+        for (T elemento : arr) {
+            if(fil.filtrado(elemento)){
+                arr.add(elemento);
+            }
+        }
+        return arr; //El return
     }
     
     
@@ -56,5 +64,5 @@ interface Operable<T>{
 }
 
 interface Filtrar<T>{
-    boolean filtrado(int num);
+    boolean filtrado(T elemento);
 }

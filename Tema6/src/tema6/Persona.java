@@ -3,96 +3,76 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tema6;
+package ejercicioslambdasstream;
 
 /**
  *
- * @author Víctor Gabriel Carvajal Aróstegui
+ * @author carlos
  */
-//Práctica 12 junto con 15 junto con 13
-final class Hombre extends Persona {
+public abstract class Persona {
+    protected String nombre;
+    protected String apellido1;
 
-    public Hombre(String nombre, String apellidos, int edad, int altura, double peso) {
-        super(nombre, apellidos, edad, altura, peso);
-        tieneBarba = true;
-    }
-
-    @Override
-    double calcularPesoIdeal() {
-        double k = 4;
-        double res = altura - 100 - ((100 - 150) / k);
-        return res;
-    }
-
-    @Override
-    public String toString() {
-        return "Hombre{" + '}';
-    }
-
-}
-
-class Mujer extends Persona {
-
-    public Mujer(String nombre, String apellidos, int edad, int altura, double peso) {
-        super(nombre, apellidos, edad, altura, peso);
-    }
-
-    @Override
-    double calcularPesoIdeal() {
-        double k = 4;
-        double res = altura - 100 - ((100 - 150) / k);
-        return res;
-    }
-
-    @Override
-    public String toString() {
-        return "Mujer{" + '}';
-    }
-
-}
-
-abstract class Persona implements Ordenable<Persona> {
-
-    String nombre;
-    String apellidos;
-    int edad;
-    int altura;
-    double peso;
-    boolean tieneBarba;
-
-    public Persona() {
-    }
-
-    abstract double calcularPesoIdeal();
-
-    protected final double calcularIMC() {
-        double alturam = altura / 100.0;
-        return peso / (alturam * alturam);
-    }
-
-    public Persona(String nombre, String apellidos, int edad, int altura, double peso) {
-        this.nombre = nombre;
-        this.apellidos = apellidos;
-        this.edad = edad;
-        this.altura = altura;
-        this.peso = peso;
-    }
-
-    @Override
-    public boolean esMenorQue(Persona or) {
-        return or.edad < this.edad;
-    }
-
-    @Override
-    public boolean esIgualQue(Persona or) {
-        return or.edad == this.edad;
-    }
-
-    @Override
-    public boolean esMayorQue(Persona or) {
-        return or.edad > this.edad;
-    }
-
+    protected int edad;
+    protected int alturaEnCm;
+    protected double pesoEnKg;
     
+    public Persona(String nombre, String ape1, int edad, int altura, double peso){
+        this.nombre = nombre;
+        this.apellido1 = ape1;
+
+        this.edad = edad;
+        this.alturaEnCm = altura;
+        this.pesoEnKg = peso;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido1() {
+        return apellido1;
+    }
+
+    public void setApellido1(String apellido1) {
+        this.apellido1 = apellido1;
+    }
+
+    public int getAlturaEnCm() {
+        return alturaEnCm;
+    }
+
+    public void setAlturaEnCm(int alturaEnCm) {
+        this.alturaEnCm = alturaEnCm;
+    }
+
+    public double getPesoEnKg() {
+        return pesoEnKg;
+    }
+
+    public void setPesoEnKg(double pesoEnKg) {
+        this.pesoEnKg = pesoEnKg;
+    }
+    
+    
+    
+    
+    protected double calcularIMC(){
+        return pesoEnKg/(Math.pow(alturaEnCm/(double)100,2));
+    }
+    protected abstract double calcularPesoIdeal();
+    @Override
+    public String toString(){
+        return "Nombre completo: " + nombre + " " + apellido1 + " " 
+                + " Edad: " + edad + " Altura: " + alturaEnCm + " Peso: " + pesoEnKg + " IMC: " + calcularIMC();
+    }
+
+    int getEdad() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

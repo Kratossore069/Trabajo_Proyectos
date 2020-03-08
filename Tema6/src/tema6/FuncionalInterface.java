@@ -66,18 +66,17 @@ public class FuncionalInterface {
             return (a + b).toUpperCase();
         });
 
-        String vocales = op2.reduccion(arrays, (String a , String b)->{
+        String vocales = op2.reduccion(arrays, (String a,String b)->{
         
             String res2 = "";
-            char c = a.charAt(0); //No está bien hecha esta parte
-            return res2;
+            char c = .charAt(0);
             
         });
 
         System.out.println(resultado);
 //Obtener un arraylist de los números pares
         ArrayList<Integer> pares = new ArrayList<Integer>();
-        Filtrar<Integer> lambda = num -> num % 2 == 0; //OperacionesArray
+        Filtrar<Integer> lambda = num -> num % 2 == 0;
         pares = ra.filtrado(array, lambda);
 //Obtener un arraylist con los números al cuadrado
         ArrayList<Integer> cuadrados = new ArrayList<Integer>();
