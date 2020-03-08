@@ -11,9 +11,10 @@ package tema6;
  */
 @FunctionalInterface
 public interface Mates {
+    
     public abstract int calc(int x);
     
     default void mostrarResultado(int x, Mates func){
-        System.out.println(x+" su operación da "+func);
+        func.calc(x); //No mostrar nunca un sout en una interfaz
     }
 }

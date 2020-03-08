@@ -44,9 +44,24 @@ public class Prct26 {
         
         /////////////////////////////////
         
-        Mates mostrar = (num, funcion) -> {
+        Mates mostrar = new Mates(){
+            
+
+            @Override
+            public void mostrarResultado(int x, Mates func) {
+                System.out.println(x+" es "+func);
+            }
+
+            @Override
+            public int calc(int x) {
+                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
             
         };
+        
+        mostrar.mostrarResultado(numero, factorial); //Sale una dirección de memoria
+        
+        mostrar.mostrarResultado(numero, cuadrado);
         
         
 
