@@ -10,7 +10,6 @@ package tema6;
  * @author Víctor Gabriel Carvajal Aróstegui
  */
 public class Prct26 {
-
     public static void main(String[] args) {
 
         /*
@@ -62,9 +61,8 @@ public class Prct26 {
         mostrar.mostrarResultado(numero, factorial); //Sale una dirección de memoria
         
         mostrar.mostrarResultado(numero, cuadrado);
-        
+        //reduce
         
 
     }
-
 }
