@@ -9,10 +9,10 @@ package tema6;
  *
  * @author Víctor Gabriel Carvajal Aróstegui
  */
-public class Prct38 {
-    /*
-    Práctica 38: Probar los dos ejemplos de sum() el que debe fallar y el que debe funcionar
-    mediante mapToInt() Tomar captura de pantalla del mensaje de error y de la ejecución bien
-    realizada
-    */
+public class MainSingleton {
+    public static void main(String[] args) {
+        Singleton neno = Singleton.getInstance();
+        
+        System.out.println(neno.clave);
+    }
 }

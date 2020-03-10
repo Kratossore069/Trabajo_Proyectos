@@ -22,9 +22,7 @@ public class Prct26 {
         
         int numero = 5;
 
-        Mates cuadrado = (num) -> { //"Declaro" la lambda
-            return num * num;
-        };
+        Mates cuadrado = (num) -> num*num;
 
         cuadrado.calc(numero); //La llamo
         
@@ -63,6 +61,13 @@ public class Prct26 {
         mostrar.mostrarResultado(numero, cuadrado);
         //reduce
         
+        mostrarResultado(numero, cuadrado); //Esta es la forma buena.
+        mostrarResultado(numero, factorial);
+        
 
+    }
+    
+    public static void mostrarResultado(int x, Mates func){
+        System.out.println(func.calc(x));
     }
 }

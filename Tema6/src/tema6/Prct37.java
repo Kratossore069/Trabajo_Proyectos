@@ -12,7 +12,6 @@ import java.util.ArrayList;
  * @author Víctor Gabriel Carvajal Aróstegui
  */
 public class Prct37 {
-
     /*
     Práctica 37: Calcular el máximo utilizando reduce() pero sin usar Integer::max , esto es:
     mediante una función lambda que generemos nosotros
@@ -28,7 +27,7 @@ public class Prct37 {
         numbers.add(1);
 
         
-        numbers.stream().reduce((acumulador, numero) -> {
+       /* numbers.stream().reduce((acumulador, numero) -> {
             int maximo=1, min=999, comodin=0;
             for (int i = 0; i < numbers.size(); i++) {
                 if(i>maximo){
@@ -38,7 +37,11 @@ public class Prct37 {
                 }
             }
             return maximo;
-        });
+        });*/
+        
+        int max = numbers.stream().reduce(0, (a,b)->(a>b)?a:b);
+        
+        System.out.println(max);
 
     }
 }
