@@ -20,4 +20,28 @@ public class Chlorotica implements Bicho, Planta {
         Chlorotica a = new Chlorotica();
         a.decirHola();
     }
+    
+    personas.stream().filter(p->p.pesoenKg<p.calcularpesoideal()).forEach(System.out::println);
+    
+    personas.stream().filter(p->p.getEdad==27).findFirst().ifPresent(p->sout(p));
+    
+    ArrayList<Hombre> hombres = (ArrayList<Hombre>)personas.stream().map(p->{
+        return new Hombre(p.nombre, p.apellido, p.edad, p.alturaenCm, p.pesoenKg);
+    }).collect(Collectors.toList());
+    
+    double pesoMedioMujeres = personas.stream().
+            filter(p->p instanceof Mujer).
+            //map(p->p.pesoenKg).
+            mapToDouble(p->p.pesoEnKg).
+            average().orElse(-1);
+    
+    personas.stream().mapToDouble(p->p.getEdad()>personas.stream().
+            filter(p->p instanceof Mujer).
+            //map(p->p.pesoenKg).
+            mapToDouble(p->p.pesoEnKg).
+            average().orElse(-1)).average().orElse(-1);
+    
+    personas.stream().filter(p->p.getEdad()>d).forEach(System.out::println);
+    
+    
 }
