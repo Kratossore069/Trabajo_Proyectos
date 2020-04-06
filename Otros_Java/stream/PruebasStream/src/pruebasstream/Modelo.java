@@ -9,9 +9,8 @@ package pruebasstream;
  *
  * @author Víctor Gabriel Carvajal Aróstegui
  */
- 
-
-// ENUM DE LOS MODELOS DE LOS COCHES
+    
+    // ENUM DE LOS MODELOS DE LOS COCHES
     
     enum Modelo {
     BMW,
