@@ -1,1 +1,6 @@
-.back {background-color:cyan;}
+.back {background:url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Teide_von_Nordosten_%28Zuschnitt_2%29.jpg/1200px-Teide_von_Nordosten_%28Zuschnitt_2%29.jpg");
+background-position: center center; /*Imagen centrada*/
+background-repeat: no-repeat;		/*La imagen no se repite*/
+background-attachment: fixed;		/*La imagen no supera la caja de contenido*/
+background-size: cover;				/*La imagen se reescala automáticamente*/
+}
