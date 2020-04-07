@@ -17,19 +17,43 @@ public class Vehiculo {
     private Modelo modelo;
     private int kilometros;
     private String duenio; //Nuevo atributo
+    private int edad;
+    private String estadoCivil;
     
     //Constructores
  
-    public Vehiculo(String matricula, Modelo modelo, int kilometros, String duenio) {
+    public Vehiculo(String matricula, Modelo modelo, int kilometros, String duenio, int edad, String estado) {
         this.matricula = matricula;
         this.modelo = modelo;
         this.kilometros = kilometros;
         this.duenio = duenio; //Nuevo atributo
+        this.edad = edad;
+        this.estadoCivil = estado;
     }
     
     //Métodos
     
     //Getter y setter
+
+    public String getEstadoCivil() {
+        return estadoCivil;
+    }
+
+    public void setEstadoCivil(String estadoCivil) {
+        this.estadoCivil = estadoCivil;
+    }
+    
+    
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+    
+    
     
     public String getDuenio() {
         return duenio;
@@ -67,6 +91,6 @@ public class Vehiculo {
  
     @Override
     public String toString() {
-        return "[ " + matricula + ", " + modelo.toString() + ", " + kilometros + ", "+duenio+" ]";
+        return "[ " + matricula + ", " + modelo.toString() + ", " + kilometros + ", "+duenio+", "+edad+" ]";
     }
 }
