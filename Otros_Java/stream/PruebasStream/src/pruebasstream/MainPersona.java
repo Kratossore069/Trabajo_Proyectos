@@ -7,6 +7,7 @@ package pasopaso;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -21,12 +22,12 @@ public class MainPersona{
         ArrayList<Persona> personas = new ArrayList<>();
         
         personas.add(new Persona("Antonio", "Padilla",       50, 170,    45.2));
-        personas.add(new Persona("Juan",    "Español",       60, 180,    46));
+        personas.add(new Persona("Juan",    "Español",       60, 180,    46.5));
         personas.add(new Persona("María",   "Padilla",       45, 160,    49.5));
         personas.add(new Persona("Olga",    "Martín",        24, 150,    32.8));
-        personas.add(new Persona("Tito",    "Salas",         38, 190,    20));
+        personas.add(new Persona("Tito",    "Salas",         38, 190,    20.3));
         personas.add(new Persona("Juan",    "Madrid",        13, 130,    30.6));
-        personas.add(new Persona(null,      "Desconocido",   20, 180,    50));
+        personas.add(new Persona(null,      "Desconocido",   20, 180,    50.5));
         
         //Gente menor que 180 cm
         
@@ -57,6 +58,31 @@ public class MainPersona{
                 .collect(Collectors.toList());
         
         System.out.println(nombres+"\n");
+        
+        //Nombres de las personas que empiecen por "M"
+        List<String> nombrazos = personas.stream()
+                .map(nom->nom.getNombre())
+                .filter(no->no!=null && (no.startsWith("M")))
+                .collect(Collectors.toList());
+        
+        System.out.println(nombrazos+"\n");
+        
+        //Ordenar por peso mayor a menor (y de menor a mayor)
+        List<Persona> ordena = personas.stream()
+                //.sorted((p2,p1)->Double.compare(p1.getPesoEnKg(), p2.getPesoEnKg()))
+                .sorted((p1,p2)->Double.compare(p1.getPesoEnKg(), p2.getPesoEnKg()))
+                .collect(Collectors.toList());
+        
+        System.out.println(ordena+"\n");
+                
+        
+        
+                        
+                        
+                        
+                        
+                
+                
                 
                 
         
