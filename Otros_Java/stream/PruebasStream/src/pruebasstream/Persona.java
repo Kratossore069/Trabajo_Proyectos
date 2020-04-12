@@ -20,14 +20,25 @@ public class Persona {
     private int edad;
     private int alturaEnCm;
     private double pesoEnKg;
+    private Sexo sexo;
 
-    public Persona(String nombre, String apellido1, int edad, int alturaEnCm, double pesoEnKg) {
+    public Persona(String nombre, String apellido1, int edad, int alturaEnCm, double pesoEnKg, Sexo sexo) {
         this.nombre = nombre;
         this.apellido1 = apellido1;
         this.edad = edad;
         this.alturaEnCm = alturaEnCm;
         this.pesoEnKg = pesoEnKg;
+        this.sexo = sexo;
     }
+
+    public Sexo getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(Sexo sexo) {
+        this.sexo = sexo;
+    }
+
 
     public String getNombre() {
         return nombre;
@@ -71,8 +82,10 @@ public class Persona {
 
     @Override
     public String toString() {
-        return "Persona{ " + " nombre= " + nombre + " , apellido1= " + apellido1 + " , edad= " + edad + " , alturaEnCm= " + alturaEnCm + " , pesoEnKg= " + pesoEnKg + " }\n";
+        return "{" + " nombre= " + nombre + " , apellido1= " + apellido1 + " , edad= " + edad + " , alturaEnCm= " + alturaEnCm + " , pesoEnKg= " + pesoEnKg + " , sexo= " + sexo + " ]\n";
     }
+
+    
     
     
 }

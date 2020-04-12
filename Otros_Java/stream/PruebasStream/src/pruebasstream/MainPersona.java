@@ -22,19 +22,19 @@ public class MainPersona {
 
         ArrayList<Persona> personas = new ArrayList<>();
 
-        personas.add(new Persona("Antonio", "Padilla", 50, 170, 45.2));
+        personas.add(new Persona("Antonio", "Padilla", 50, 170, 45.2, Sexo.HOMBRE));
 
-        personas.add(new Persona("Juan", "Español", 60, 180, 46.5));
+        personas.add(new Persona("Juan", "Español", 60, 180, 46.5, Sexo.HOMBRE));
 
-        personas.add(new Persona("María", "Padilla", 45, 160, 49.5));
+        personas.add(new Persona("María", "Padilla", 45, 160, 49.5, Sexo.MUJER));
 
-        personas.add(new Persona("Olga", "Martín", 24, 150, 32.8));
+        personas.add(new Persona("Olga", "Martín", 24, 150, 32.8, Sexo.MUJER));
 
-        personas.add(new Persona("Tito", "Salas", 38, 190, 20.3));
+        personas.add(new Persona("Tito", "Salas", 38, 190, 20.3, Sexo.HOMBRE));
 
-        personas.add(new Persona("Juan", "Madrid", 13, 130, 30.6));
+        personas.add(new Persona("Juan", "Madrid", 13, 130, 30.6, Sexo.HOMBRE));
 
-        personas.add(new Persona(null, "Desconocido", 20, 180, 50.5));
+        personas.add(new Persona(null, "Desconocido", 20, 180, 50.5, null));
 
         //Gente menor que 180 cm
         List<Persona> bajitos = personas.stream()
@@ -160,6 +160,35 @@ public class MainPersona {
                 .min()
                 .ifPresent(datomin->System.out.println("El mínimo es "+datomin+"\n"));
         
+        
+        //Datos de las personas que miden entre 2 y 1.60 metros
+        List<String> personasAltas = personas.stream()
+                .filter(aa->(aa.getAlturaEnCm()>160)&&(aa.getAlturaEnCm()<200))
+                .map(a->Optional.ofNullable(a))
+                .map(b->b.map(c->c.toString()))
+                .filter(Optional::isPresent)
+                .map((d->d.get()))
+                .collect(Collectors.toList());
+        System.out.println(personasAltas+"\n");
+                
+                
+        //Diferenciar entre hombres y mujeres
+        personas.stream()
+                .map(Optional::ofNullable) //Stream<Optional<Persona>>
+                .filter(Optional::isPresent) //igual que arriba
+                .map(a->a.get()) //Stream<Persona> sale una dirección de memoria
+                .forEach(dato->{
+                    if(dato.getSexo()==Sexo.HOMBRE)
+                        System.out.println("Hombres ---> "+dato+"\n");
+                    else
+                        System.out.println("Mujeres ---> "+dato+"\n");
+                });
+                
+                
+                
+                
+        
+                
                 
 
     }
