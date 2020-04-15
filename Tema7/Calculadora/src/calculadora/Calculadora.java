@@ -12,24 +12,39 @@ package calculadora;
 public class Calculadora {
     
     public void operacion(int n1, int n2,String op){
-        switch(){
+        switch(op){
+            case "+":
+                suma(n1, n2);
+                break;
+                
+            case "-":
+                resta(n1, n2);
+                break;
+                
+            case "*":
+                multiplica(n1, n2);
+                break;
+                
+            case "/":
+                divide(n1, n2);
+                break;
             
         }
     }
     
-    public int suma(int n1, int n2){
+    public static int suma(int n1, int n2){
         return n1+n2;
     }
     
-    public int resta(int n1, int n2){
+    public static int resta(int n1, int n2){
         return n1-n2;
     }
     
-    public int multiplica(int n1, int n2){
+    public static int multiplica(int n1, int n2){
         return n1*n2;
     }
     
-    public double divide(int n1, int n2){
+    public static double divide(int n1, int n2){
         return n1/n2;
     }
     

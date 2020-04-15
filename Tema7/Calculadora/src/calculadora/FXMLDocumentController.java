@@ -61,13 +61,15 @@ public class FXMLDocumentController implements Initializable {
         label.setText("Hello World!");
     }*/
     
-    //Métodos
     
+    //Constructor
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        calculadora = new Ini();
+        calculadora = new Calculadora();
     }    
+    
+    //Métodos
 
     @FXML
     private void pulsar1(ActionEvent event) {
@@ -91,7 +93,8 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void botonigual(ActionEvent event) {
-        this.pantalla.setText("=");
+        //this.pantalla.setText("=");
+        calculadora.operacion(0, 0, op);
     }
 
     @FXML
