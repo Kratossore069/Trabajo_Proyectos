@@ -55,11 +55,10 @@ public class FXMLDocumentController implements Initializable {
     private Button botonsumar;
     @FXML
     private Button botonmulti;
-    
-   /* private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
-    }*/
+    @FXML
+    private Button num0;
+    @FXML
+    private Button numLimpiar;
     
     
     //Constructor
@@ -84,7 +83,7 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void resultado(ActionEvent event) {
-       
+       //calculadora.operacion(op); Aquí falta algo
     }
 
     @FXML
@@ -96,6 +95,26 @@ public class FXMLDocumentController implements Initializable {
         pantalla.setText(" ");
         
     }
+
+    @FXML
+    private void limpiar(ActionEvent event) {
+        pantalla.setText(" ");
+    }
+    /*
+    
+    @FXML
+    private void evaluar(ActionEvent event) {
+        String result = Evaluar.eval(entrada.getText());
+        entrada.setText(result);
+    }
+    
+    @FXML
+    private void otroBoton(ActionEvent event) {
+        Button btn = (Button) event.getSource();
+        String nuevaEntrada = entrada.getText() + btn.getText();
+        entrada.setText(nuevaEntrada);
+    }
+    */
     
 }
 

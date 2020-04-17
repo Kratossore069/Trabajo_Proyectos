@@ -21,19 +21,19 @@ public class Calculadora {
     public void operacion(String op){
         switch(op){
             case "+":
-                suma(n1, n2);
+                
                 break;
                 
             case "-":
-                resta(n1, n2);
+                //resta(n1, n2);
                 break;
                 
             case "*":
-                multiplica(n1, n2);
+               // multiplica(n1, n2);
                 break;
                 
             case "/":
-                divide(n1, n2);
+               // divide(n1, n2);
                 break;
             
         }
@@ -59,5 +59,7 @@ public class Calculadora {
     public static double divide(int n1, int n2){
         return n1/n2;
     }
+    
+    
     
 }
