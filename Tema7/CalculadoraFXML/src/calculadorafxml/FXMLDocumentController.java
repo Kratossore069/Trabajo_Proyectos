@@ -60,6 +60,9 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private Button numLimpiar;
     
+    private int numero1;
+    private String operador="";
+    
     
     //Constructor
     @Override
@@ -70,51 +73,41 @@ public class FXMLDocumentController implements Initializable {
     
     //Métodos
 
+    
+    //¿Cómo decirle al programa qué numero es el primero y cuál es el segundo?
 
     @FXML
     private void operando(ActionEvent event) { //Números
         
-        Button digito = (Button)event.getSource();
-        String textDigito = digito.getText();
-        int numero = Integer.parseInt(textDigito);
-        calculadora.digitos(numero);
-        pantalla.setText(pantalla.getText()+numero);
+        Button digito = (Button)event.getSource(); //Recogemos el botón y la señal
+        String textDigito = digito.getText(); //Recogemos el texto del botón seleccionado
+        numero1= Integer.parseInt(textDigito); //Llevamos ese entero a una variable global
+        //calculadora.digitos(numero1);
+        pantalla.setText(pantalla.getText()+numero1); //Sale por pantalla los números insertados
     }
 
     @FXML
     private void resultado(ActionEvent event) {
-       //calculadora.operacion(op); Aquí falta algo
+        int res = calculadora.operacion(numero1,numero1, operador); 
+        pantalla.setText(""+res);
     }
 
     @FXML
     private void operador(ActionEvent event) { //Operaciones
-        Button operador = (Button)event.getSource();
-        String textOperar = operador.getText();
-        calculadora.operacion(textOperar);
-        pantalla.setText(textOperar);
-        pantalla.setText(" ");
+        Button operado = (Button)event.getSource();
+        operador= operado.getText();
+        //calculadora.operacion(numero1,numero1,operador);
+        pantalla.setText(operador);
+        //pantalla.setText(" ");
         
     }
 
     @FXML
     private void limpiar(ActionEvent event) {
         pantalla.setText(" ");
-    }
-    /*
-    
-    @FXML
-    private void evaluar(ActionEvent event) {
-        String result = Evaluar.eval(entrada.getText());
-        entrada.setText(result);
+        calculadora.operacion(0, 0, "+");
     }
     
-    @FXML
-    private void otroBoton(ActionEvent event) {
-        Button btn = (Button) event.getSource();
-        String nuevaEntrada = entrada.getText() + btn.getText();
-        entrada.setText(nuevaEntrada);
-    }
-    */
     
 }
 
