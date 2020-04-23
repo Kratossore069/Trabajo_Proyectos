@@ -14,6 +14,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -35,6 +36,8 @@ public class FXMLDocumentController implements Initializable {
     private GridPane grid;
     
         int contadorFilas=0;
+    @FXML
+    private ScrollPane scroll;
     @FXML
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
@@ -129,6 +132,7 @@ public class FXMLDocumentController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        scroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
         // TODO
     }    
     
