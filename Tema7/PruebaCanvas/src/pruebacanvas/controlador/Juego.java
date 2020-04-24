@@ -41,9 +41,17 @@ public class Juego implements Initializable {
         
         gc.setLineWidth(3.0);
         gc.setStroke(Color.BLACK);
-        gc.strokeLine(50, 50, 50, 100);
-        gc.strokeLine(50, 100, 200, 100);
-        gc.strokeOval(200, 100, 5, 5);
+        gc.strokeLine(100, 300, 400, 300); //Línea recta
+        gc.strokeLine(200, 300, 200, -600); //Línea vertical en medio de la recta
+        gc.strokeLine(200, 80, 400, -600); //Línea horizontal al lado del final de la vertical
+        gc.strokeLine(200, 10, 400, 10); //Línea hacia abajo de la horizontal
+        gc.strokeLine(400, 10, 400, 100); //Línea hacia abajo de la horizontal
+        gc.strokeOval(400, 100, 50, 50); //Cabeza
+        gc.strokeLine(400, 100, 400, 200); //Cuerpo
+        gc.strokeLine(400, 200, 300, 200); //Brazo I
+        gc.strokeLine(400, 200, 500, 200); //Brazo D
+        gc.strokeLine(400, 200, 300, 250); //Pierna I
+        gc.strokeLine(400, 200, 500, 250); //Brazo D
     }    
     
 }
