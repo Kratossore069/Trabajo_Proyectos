@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -9,33 +9,32 @@
 
 <AnchorPane id="AnchorPane" prefHeight="571.0" prefWidth="752.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hundirflotagithubb.FXMLDocumentController">
    <children>
-      <GridPane fx:id="grid" layoutX="28.0" layoutY="38.0" prefHeight="239.0" prefWidth="339.0">
+      <TextArea fx:id="resultados" editable="false" layoutX="28.0" layoutY="315.0" prefHeight="239.0" prefWidth="701.0" />
+      <GridPane fx:id="gridJugador" layoutX="28.0" layoutY="23.0">
         <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         </columnConstraints>
         <rowConstraints>
-            <RowConstraints maxHeight="62.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="67.0" minHeight="10.0" prefHeight="57.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="52.0" minHeight="10.0" prefHeight="52.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
-         <children>
-            <Button fx:id="btn00" mnemonicParsing="false" onAction="#disparo" text="[0,0]" />
-            <Button fx:id="btn01" mnemonicParsing="false" onAction="#disparo" text="[0,1]" GridPane.columnIndex="1" />
-            <Button fx:id="btn02" mnemonicParsing="false" onAction="#disparo" text="[0,2]" GridPane.columnIndex="2" />
-            <Button fx:id="btn10" mnemonicParsing="false" onAction="#disparo" text="[1,0]" GridPane.rowIndex="1" />
-            <Button fx:id="btn11" mnemonicParsing="false" onAction="#disparo" text="[1,1]" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="btn12" mnemonicParsing="false" onAction="#disparo" text="[1,2]" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <Button fx:id="btn20" mnemonicParsing="false" onAction="#disparo" text="[2,0]" GridPane.rowIndex="2" />
-            <Button fx:id="btn21" mnemonicParsing="false" onAction="#disparo" text="[2,1]" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-            <Button fx:id="btn22" mnemonicParsing="false" onAction="#disparo" text="[2,2]" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-            <Button fx:id="btn30" mnemonicParsing="false" onAction="#disparo" text="[3,0]" GridPane.rowIndex="3" />
-            <Button fx:id="btn31" mnemonicParsing="false" onAction="#disparo" text="[3,1]" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-            <Button fx:id="btn32" mnemonicParsing="false" onAction="#disparo" text="[3,2]" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-         </children>
       </GridPane>
-      <TextArea fx:id="resultados" editable="false" layoutX="28.0" layoutY="315.0" prefHeight="239.0" prefWidth="701.0" />
+      <GridPane fx:id="gridMaquina" layoutX="429.0" layoutY="23.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <Label layoutX="28.0" layoutY="244.0" prefHeight="16.0" prefWidth="136.0" text="Tablero del jugador" />
+      <Label layoutX="579.0" layoutY="244.0" text="Tablero de la máquina" />
    </children>
 </AnchorPane>
