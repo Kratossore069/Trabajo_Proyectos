@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package hundirflotagithubb;
+package proyectoflota;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -15,7 +15,7 @@ import javafx.stage.Stage;
  *
  * @author Víctor Gabriel Carvajal Aróstegui
  */
-public class HundirFlotaGithubb extends Application {
+public class ProyectoFlota extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
