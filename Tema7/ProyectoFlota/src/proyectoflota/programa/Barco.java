@@ -1,5 +1,7 @@
 package proyectoflota.programa;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Víctor Gabriel Carvajal Aróstegui
@@ -8,13 +10,14 @@ public class Barco {
 
     //Atributos
     private int medida;
+    private ArrayList<Casillas> cuerpo;
 
     enum barcos {
         portaaviones, buque, lancha
     };
-    private boolean hundido = false;
+    //private boolean hundido = false;
     private int[][] posicionesOcupadas;
-    private boolean[][] posicionesHeridas;
+    private int[][] posicionesHeridas;
     private int direccion;
 
     
@@ -37,11 +40,23 @@ public class Barco {
     //Métodos
 
     /**
-     * @return Cambia el boolean de hundido a true.
+     * @return Método de tocado o no el barco en cuestión.
      */
-    public void hundido() {
-        hundido = true;
-    }
+    boolean hundido(){
+
+    boolean hundido = true;
+
+      for(Casillas c: cuerpo ){
+
+          if( c.contenido == false )
+
+               hundido = false;
+
+     }
+
+     return hundido;
+
+}
 
     /**
      * 
@@ -50,7 +65,7 @@ public class Barco {
      * @return Posición del barco herido.
      */
     public void herido(int x, int y) {
-        posicionesHeridas[x][y] = true;
+        posicionesHeridas[x][y] = 0;
     }
 
     /**

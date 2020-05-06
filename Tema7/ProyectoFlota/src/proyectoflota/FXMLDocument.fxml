@@ -25,7 +25,7 @@
       <Button fx:id="btn03" layoutX="251.0" layoutY="92.0" mnemonicParsing="false" onAction="#disparoJugador" text="[0,3]" />
       <Button fx:id="btn02" layoutX="177.0" layoutY="92.0" mnemonicParsing="false" onAction="#disparoJugador" text="[0,2]" />
       <Button fx:id="btn01" layoutX="103.0" layoutY="92.0" mnemonicParsing="false" onAction="#disparoJugador" text="[0,1]" />
-      <Button fx:id="agua1" layoutX="376.0" layoutY="92.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="62.0" textFill="#5531e4" />
+      <Button fx:id="agua1" layoutX="376.0" layoutY="92.0" mnemonicParsing="false" onAction="#elTablero" prefHeight="26.0" prefWidth="62.0" textFill="#5531e4" />
       <Button fx:id="agua16" layoutX="604.0" layoutY="213.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="49.0" />
       <Button fx:id="agua15" layoutX="530.0" layoutY="213.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="49.0" />
       <Button fx:id="agua14" layoutX="456.0" layoutY="213.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="49.0" />

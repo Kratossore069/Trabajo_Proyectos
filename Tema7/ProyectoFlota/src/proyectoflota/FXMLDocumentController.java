@@ -93,21 +93,29 @@ public class FXMLDocumentController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO No se toca mucho
+        // TODO
         
         T tablero = new T(); //Se generan barcos de manera aleatoria, en total 3
         tablero.generarBarcos();
         
     }    
 
+    /**
+     * 
+     * @param Aquí se dispara desde el panel de la izquierda.
+     */
     @FXML
     private void disparoJugador(ActionEvent event) {
         
+        resultados.setText("Se ha disparado en ");//Conseguir que se dispare en X sitio
         
+    }
+
+    //Este método está para probar.
+    @FXML
+    private void elTablero(ActionEvent event) {
         
-        
-        
-        
+        resultados.setText("Esto es del tablero");
     }
     
 }

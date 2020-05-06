@@ -12,6 +12,8 @@ package proyectoflota.programa;
  */
 public class Casillas {
     
+    Barco barco;
+    
     public char forma = '~';
     public boolean contenido = false;
 }
