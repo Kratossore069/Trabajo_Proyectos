@@ -6,7 +6,6 @@
 package proyectoflota;
 
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -56,22 +55,54 @@ public class FXMLDocumentController implements Initializable {
     private Button btn02;
     @FXML
     private Button btn01;
+    @FXML
+    private Button agua1;
+    @FXML
+    private Button agua16;
+    @FXML
+    private Button agua15;
+    @FXML
+    private Button agua14;
+    @FXML
+    private Button agua13;
+    @FXML
+    private Button agua12;
+    @FXML
+    private Button agua11;
+    @FXML
+    private Button agua10;
+    @FXML
+    private Button agua9;
+    @FXML
+    private Button agua8;
+    @FXML
+    private Button agua7;
+    @FXML
+    private Button agua6;
+    @FXML
+    private Button agua5;
+    @FXML
+    private Button agua4;
+    @FXML
+    private Button agua3;
+    @FXML
+    private Button agua2;
 
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
-        try{
-        //T.generarBarcos();
-        }catch(Exception x){
-            resultados.setText("No se pudieron poner barcos");
-        }
+        // TODO No se toca mucho
+        
+        T tablero = new T(); //Se generan barcos de manera aleatoria, en total 3
+        tablero.generarBarcos();
+        
     }    
 
     @FXML
     private void disparoJugador(ActionEvent event) {
+        
         
         
         

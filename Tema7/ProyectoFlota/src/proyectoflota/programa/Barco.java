@@ -22,11 +22,11 @@ public class Barco {
     public Barco(barcos tipo) {
         switch (tipo) {
             case portaaviones:
-                medida = 5;
+                medida = 3;
                 posicionesOcupadas = new int[medida][2];
                 break;
             case buque:
-                medida = 3;
+                medida = 2;
                 posicionesOcupadas = new int[medida][2];
             case lancha:
                 medida = 1;
@@ -47,7 +47,7 @@ public class Barco {
      * 
      * @param x Coordenada x
      * @param y Coordenada y
-     * @return Posición del barco herida.
+     * @return Posición del barco herido.
      */
     public void herido(int x, int y) {
         posicionesHeridas[x][y] = true;
