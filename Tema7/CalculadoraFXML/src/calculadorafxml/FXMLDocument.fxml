@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="299.0" prefWidth="401.0" stylesheets="@vista/estilos.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="calculadorafxml.controlador.FXMLDocumentController">
+   <children>
+      <TextArea fx:id="pantalla" editable="false" layoutX="25.0" layoutY="14.0" prefHeight="45.0" prefWidth="359.0" />
+      <Button fx:id="num1" layoutX="52.0" layoutY="184.0" mnemonicParsing="false" onAction="#operando" text="1" />
+      <Button fx:id="num2" layoutX="99.0" layoutY="184.0" mnemonicParsing="false" onAction="#operando" text="2" />
+      <Button fx:id="num3" layoutX="146.0" layoutY="184.0" mnemonicParsing="false" onAction="#operando" text="3" />
+      <Button fx:id="num4" layoutX="52.0" layoutY="130.0" mnemonicParsing="false" onAction="#operando" text="4" />
+      <Button fx:id="igual" layoutX="253.0" layoutY="210.0" mnemonicParsing="false" onAction="#resultado" prefHeight="26.0" prefWidth="90.0" text="=" />
+      <Button fx:id="boton5" layoutX="99.0" layoutY="130.0" mnemonicParsing="false" onAction="#operando" text="5" />
+      <Button fx:id="boton6" layoutX="146.0" layoutY="130.0" mnemonicParsing="false" onAction="#operando" text="6" />
+      <Button fx:id="boton7" layoutX="52.0" layoutY="79.0" mnemonicParsing="false" onAction="#operando" text="7" />
+      <Button fx:id="boton8" layoutX="99.0" layoutY="79.0" mnemonicParsing="false" onAction="#operando" text="8" />
+      <Button fx:id="boton9" layoutX="146.0" layoutY="79.0" mnemonicParsing="false" onAction="#operando" text="9" />
+      <Button fx:id="botonrestar" layoutX="316.0" layoutY="156.0" mnemonicParsing="false" onAction="#operador" text="-" />
+      <Button fx:id="botondivide" layoutX="316.0" layoutY="105.0" mnemonicParsing="false" onAction="#operador" text="/" />
+      <Button fx:id="botonsumar" layoutX="253.0" layoutY="156.0" mnemonicParsing="false" onAction="#operador" text="+" />
+      <Button fx:id="botonmulti" layoutX="255.0" layoutY="105.0" mnemonicParsing="false" onAction="#operador" text="*" />
+      <Button fx:id="num0" layoutX="48.0" layoutY="236.0" mnemonicParsing="false" onAction="#operando" prefHeight="26.0" prefWidth="69.0" text="0" />
+      <Button fx:id="numLimpiar" layoutX="129.0" layoutY="236.0" mnemonicParsing="false" onAction="#limpiar" prefHeight="26.0" prefWidth="46.0" text="AC" />
+   </children>
+</AnchorPane>
