@@ -1,27 +1,13 @@
 "use strict";
-class VistaAjax{
+class VistaAjax extends ControladorAjax{
     /**
      * Constructor por defecto
      */
     constructor(){
-        this.controladorAjax=new ControladorAjax();
-        console.log(this.controladorAjax);
-    }
-
-    /**
-     * Funcion que llama al Ajax desde el controlador
-     */
-    llamarAjax(){
-        this.controladorAjax.llamarArchivo();
-    }
-
-    /**
-     * Saludo inicial
-     */
-    saludo(){
-        return this.controladorAjax.saludo();
+        super();
     }
 }
 
 const ajax=new VistaAjax();
-document.getElementById("demo").innerHTML=ajax.llamarAjax();
+document.getElementById("titulo").innerHTML=ajax.saludo();
+document.getElementById("demo").innerHTML=ajax.llamarArchivo();

@@ -1,6 +1,6 @@
 class Ajax {
     /**
-     * Metodo Ajax que recibe una informacion
+     * Metodo Ajax que recibe una informacion (modelo)
      */
     llamarArchivo() {
         const xhttp = new XMLHttpRequest();
