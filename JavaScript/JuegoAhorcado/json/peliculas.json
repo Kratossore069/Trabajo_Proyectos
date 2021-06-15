@@ -1,0 +1,26 @@
+[
+    {
+        "Título":"El Padrino",
+        "Director":"Francis Ford Coppola",
+        "Año":1972,
+        "Pista":"Va de mafiosos",
+        "Info":"Historia que trata sobre la mafia italiana en Norteamérica",
+        "Foto":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.sensacine.com%2Fpeliculas%2Fpelicula-1628%2F&psig=AOvVaw0V32d52BMkDL5z43tvCDLB&ust=1623882121387000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNi-gLrWmvECFQAAAAAdAAAAABAJ"
+    },
+    {
+        "Título":"300",
+        "Director":"Zack Snyder",
+        "Año":2006,
+        "Pista":"Guerreros espartanos",
+        "Info":"Trata sobre la lucha de Leónidas sobre el imperio persa",
+        "Foto":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.filmaffinity.com%2Fes%2Ffilm186830.html&psig=AOvVaw0LaDI6UEVgBLqvBmC2V7Ne&ust=1623882459145000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOi8gtvXmvECFQAAAAAdAAAAABAE"
+    },
+    {
+        "Título":"El caballero oscuro",
+        "Director":"Christopher Nolan",
+        "Año":2008,
+        "Pista":"Héroe de DC que va de negro",
+        "Info":"Batman se enfrenta al Jóker",
+        "Foto":"https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.amazon.es%2FDark-Knight-Alemania-DVD%2Fdp%2FB001G73S2S&psig=AOvVaw1aeVKmXKpQ6tcCBL7-qr3n&ust=1623882628661000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMC-8avYmvECFQAAAAAdAAAAABAJ"
+    }
+]
