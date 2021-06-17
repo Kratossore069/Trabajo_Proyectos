@@ -30,9 +30,8 @@ class JuegoModelo {
                 " Minutos: " + fechaHora.getMinutes() + " Segundos: " + fechaHora.getSeconds();
             // Lo añado
             sessionStorage.setItem("tiempo", tiempo);
-            document.write(sessionStorage.getItem("jugador") + " " + sessionStorage.getItem("tiempo"));
         } else {
-            document.write("Su navegador no soporta ");
+            document.write("Su navegador no soporta sessionStorage");
         }
     }
 
