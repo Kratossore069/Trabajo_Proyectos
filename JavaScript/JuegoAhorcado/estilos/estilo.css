@@ -1,0 +1,9 @@
+.botonesJuego{
+    height: 200px;
+    width: 200px;
+    background-color: cornflowerblue;
+    align-items: center;
+}
+body{
+    background-color: blueviolet;
+}
