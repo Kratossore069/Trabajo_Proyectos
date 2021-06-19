@@ -22,6 +22,12 @@ window.addEventListener('DOMContentLoaded', () => {
     ahorcadoControlador.llamarStorage("Víctor");
     //ahorcadoControlador.llamarPeliculas("../json/peliculas.json");
 
-    logicaJuego.crearElemento("button", "Contra IA", "botonIa", "botones");
-    logicaJuego.crearElemento("button", "Contra Jugador", "botonJugador", "botones");
+    var botonprimero=document.getElementById("botonIA").attributes.id.nodeValue;
+    var botonsegundo=document.getElementById("botonJugador").attributes.id.nodeValue;
+    document.getElementById("botonIA").addEventListener("click",()=>{
+        alert(botonprimero);
+    });
+    document.getElementById("botonJugador").addEventListener("click",()=>{
+        alert(botonsegundo);
+    });
 });
