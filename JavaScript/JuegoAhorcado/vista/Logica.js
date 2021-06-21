@@ -20,7 +20,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
     ahorcadoControlador.llamarSetCookie("usuario", "Víctor", 800);
     ahorcadoControlador.llamarStorage("Víctor");
-    var tituloAdivinar = ahorcadoControlador.llamarPeliculas("../json/peliculas.json");
+    var palabraRescatada=ahorcadoControlador.llamarPeliculas("../json/peliculas.json");
+
+    function ocultarPalabra(palabra){
+        for(var i=0;i<palabra.length;i++){
+            palabra[i]='_';
+        }
+        return palabra;
+    }
+
+    document.write(ocultarPalabra(palabraRescatada));
 
     var botonprimero = document.getElementById("botonIA").attributes.id.nodeValue;
     var botonsegundo = document.getElementById("botonJugador").attributes.id.nodeValue;
