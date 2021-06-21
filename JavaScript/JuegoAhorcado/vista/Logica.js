@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     ahorcadoControlador.llamarSetCookie("usuario", "Víctor", 800);
     ahorcadoControlador.llamarStorage("Víctor");
-    ahorcadoControlador.llamarPeliculas("../json/peliculas.json");
+    var tituloAdivinar = ahorcadoControlador.llamarPeliculas("../json/peliculas.json");
 
     var botonprimero = document.getElementById("botonIA").attributes.id.nodeValue;
     var botonsegundo = document.getElementById("botonJugador").attributes.id.nodeValue;
@@ -30,6 +30,5 @@ window.addEventListener('DOMContentLoaded', () => {
     document.getElementById("botonJugador").addEventListener("click", () => {
         alert(botonsegundo);
     });
-
     
 });

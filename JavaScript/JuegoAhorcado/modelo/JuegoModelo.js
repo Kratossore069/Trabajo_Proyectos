@@ -3,14 +3,16 @@ class JuegoModelo {
     /**
      * Funcion AJAX del modelo
      * @param {string} direccion  direccion del archivo JSON para mostrar
-     * @return retorna un texto de un JSON externo
      */
     peticionPalabras(direccion) {
+        var tituloPelicula=null;
+        var objetivoHTML = document.getElementById("palabraAdivinar");
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                var objeto = JSON.parse(xhttp.responseText);
-                return objeto;
+                var objetoRescatado = JSON.parse(xhttp.responseText);
+                tituloPelicula=objetoRescatado.Peliculas[Math.floor(Math.random() * 4)].Titulo;
+                objetivoHTML.innerHTML=tituloPelicula;
             }
         };
         xhttp.open("GET", direccion, true);
