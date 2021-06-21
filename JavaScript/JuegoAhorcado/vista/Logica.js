@@ -20,14 +20,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
     ahorcadoControlador.llamarSetCookie("usuario", "Víctor", 800);
     ahorcadoControlador.llamarStorage("Víctor");
-    //ahorcadoControlador.llamarPeliculas("../json/peliculas.json");
+    ahorcadoControlador.llamarPeliculas("../json/peliculas.json");
 
-    var botonprimero=document.getElementById("botonIA").attributes.id.nodeValue;
-    var botonsegundo=document.getElementById("botonJugador").attributes.id.nodeValue;
-    document.getElementById("botonIA").addEventListener("click",()=>{
+    var botonprimero = document.getElementById("botonIA").attributes.id.nodeValue;
+    var botonsegundo = document.getElementById("botonJugador").attributes.id.nodeValue;
+    document.getElementById("botonIA").addEventListener("click", () => {
         alert(botonprimero);
     });
-    document.getElementById("botonJugador").addEventListener("click",()=>{
+    document.getElementById("botonJugador").addEventListener("click", () => {
         alert(botonsegundo);
     });
+
+    
 });

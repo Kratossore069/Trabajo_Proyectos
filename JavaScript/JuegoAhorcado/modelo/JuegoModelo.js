@@ -1,14 +1,16 @@
 "use strict";
 class JuegoModelo {
     /**
-     * Peticion Ajax sobre un Json de peliculas (modelo)
-     * @param {string} direccion desde donde se va a pedir la informacion 
+     * Funcion AJAX del modelo
+     * @param {string} direccion  direccion del archivo JSON para mostrar
+     * @return retorna un texto de un JSON externo
      */
     peticionPalabras(direccion) {
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {
-                document.write(this.responseText);
+                var objeto = JSON.parse(xhttp.responseText);
+                return objeto;
             }
         };
         xhttp.open("GET", direccion, true);
