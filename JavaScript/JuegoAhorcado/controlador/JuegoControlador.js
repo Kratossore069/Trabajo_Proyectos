@@ -8,18 +8,6 @@ class JuegoControlador{
     }
 
     /**
-     * Peticion de informacion de un Ajax (controlador)
-     * @param {string} direccion desde donde se pide la informacion
-     * @returns mensaje de error
-     */
-    llamarPeliculas(direccion){
-        if(direccion==""){
-            alert("La direccion no puede estar vacia");
-        }
-        this.modeloAjax.peticionPalabras(direccion);
-    }
-
-    /**
      * Funcion que llama al storage de la pagina (controller)
      * @param {string} nombre de la sesion
      */
