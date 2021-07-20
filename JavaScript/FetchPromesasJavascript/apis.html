@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usando APIs y promesas</title>
+</head>
+
+<body>
+    <div id="nombre"></div>
+    <!-- Script de JavaScript -->
+    <script>
+        conApis(145);
+        function conApis(numero) {
+            const url = "https://pokeapi.co/api/v2/pokemon/";
+            fetch(url+numero)
+                .then(response => response.json())
+                .then(data => {
+                    var nombreHtml = document.getElementById("nombre");
+                    nombreHtml.innerHTML = "<h2>" + data.name + "</h2><img src=" + data.sprites.front_default + "></img>";
+                }
+                )
+                .catch(error => document.write("Existe un error " + error));
+        }
+
+        const promesa=new Promise((bien,mal)=>{
+            if(conApis(url))
+                bien("Todo funciona");
+            else
+                mal("Algo va mal en la petición");
+        });
+
+        promesa.then(mensaje=>console.log(mensaje));
+    </script>
+</body>
+
+</html>
