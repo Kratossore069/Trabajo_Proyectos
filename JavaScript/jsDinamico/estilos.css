@@ -1,0 +1,24 @@
+.cajaTitulo{
+    background-color: cyan;
+    width: 90%;
+    padding: 50px;
+    margin: 20px;
+}
+
+.cajaCuerpo{
+    background-color: aquamarine;
+    width: 90%;
+    padding: 50px;
+    margin: 20px;
+}
+
+.cajaPie{
+    background-color: yellow;
+    width: 90%;
+    padding: 50px;
+    margin: 20px;
+}
+
+h1:hover{
+    color:red;
+}
