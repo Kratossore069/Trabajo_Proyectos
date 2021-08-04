@@ -1,4 +1,5 @@
 "use strict";
+// Esto es un comentario de prueba por GitHUB
 class Elementos {
     /**
      * Metodo que crea el título de la página
