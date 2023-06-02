@@ -12,11 +12,9 @@ import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
-import javax.persistence.JoinColumn;
 
 @Data
 @AllArgsConstructor
@@ -52,7 +50,6 @@ public class User {
     }
 
     public User(String firstName, String lastName, String email, String password, Collection<Role> roles) {
-        super();
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;

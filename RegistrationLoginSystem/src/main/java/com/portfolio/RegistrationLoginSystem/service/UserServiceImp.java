@@ -18,16 +18,11 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class UserServiceImp implements UserService {
-
+    @Autowired
     private UserRepository userRepository;
 
     @Autowired
     private BCryptPasswordEncoder passwordEncoder;
-
-    public UserServiceImp(UserRepository userRepository) {
-        //super();
-        this.userRepository = userRepository;
-    }
 
     /**
      * Function save a new user in the system
