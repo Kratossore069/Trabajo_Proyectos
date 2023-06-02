@@ -27,6 +27,11 @@ public class TaskController {
         return this.taskService.findAll();
     }
 
+    @GetMapping
+    public long findAllRegisters(){
+        return taskService.findAllRegisters();
+    }
+
     @GetMapping("/status/{status}")
     public List<Task> findAllbyStatus(@PathVariable("status") TaskStatus status){
         return this.taskService.findAllByTaskStatus(status);

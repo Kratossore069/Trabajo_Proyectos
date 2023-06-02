@@ -28,6 +28,14 @@ public class TaskService {
         return this.repository.save(task);
     }
 
+    /**
+     * Method to count all registers in bdd
+     * @return number of registers in bdd
+     */
+    public long findAllRegisters(){
+        return this.repository.count();
+    }
+
     public List<Task> findAll() {
         return this.repository.findAll();
     }
